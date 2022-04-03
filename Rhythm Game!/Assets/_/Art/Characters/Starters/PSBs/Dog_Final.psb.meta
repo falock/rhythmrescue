@@ -1,0 +1,517 @@
+fileFormatVersion: 2
+guid: 00a746222e89b444cbe0551f9731dbc6
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 1100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Left Ear
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2084
+      width: 571
+      height: 674
+    spriteID: bc2845ae68eff4b65b49d6e0db367ab3
+    internalID: 0
+    spriteBone:
+    - name: Left_Ear
+      position: {x: 453.74384, y: 495.9131, z: 0}
+      rotation: {x: 0, y: 0, z: 0.898332, w: 0.4393172}
+      length: 328.6462
+      parentId: -1
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -60, y: 1014}
+  - name: Right Ear
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1402
+      width: 572
+      height: 674
+    spriteID: 3f06e0e2d38164389ad0ecc65be5e53d
+    internalID: 0
+    spriteBone:
+    - name: Right_Ear
+      position: {x: 99.178955, y: 484.60876, z: 0}
+      rotation: {x: 0, y: 0, z: 0.41949952, w: 0.90775555}
+      length: 356.50464
+      parentId: -1
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1440, y: 316}
+  - name: Left Arm
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3565
+      width: 192
+      height: 285
+    spriteID: 491df4bf4321447ad82f15523a1b9c7d
+    internalID: 0
+    spriteBone:
+    - name: Left_Arm
+      position: {x: 178.04199, y: 257.62793, z: 0}
+      rotation: {x: 0, y: 0, z: -0.80961025, w: 0.5869678}
+      length: 263.92136
+      parentId: -1
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -654, y: 3414}
+  - name: Right Arm
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3276
+      width: 195
+      height: 281
+    spriteID: 525a19e152c7a456fb423f1d767c1913
+    internalID: 0
+    spriteBone:
+    - name: Right_Arm
+      position: {x: 45.65857, y: 225.6499, z: 0}
+      rotation: {x: 0, y: 0, z: -0.5247176, w: 0.8512764}
+      length: 241.99152
+      parentId: -1
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1187, y: 3123}
+  - name: Head
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1594
+      height: 1390
+    spriteID: 6fd19a0450432457f8040096498ca121
+    internalID: 0
+    spriteBone:
+    - name: Head
+      position: {x: 806.3722, y: 3.390808, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7027631, w: 0.711424}
+      length: 1350.7568
+      parentId: -1
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -225, y: -384}
+  - name: Body
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2766
+      width: 456
+      height: 502
+    spriteID: 72b7f33e5852042f597875922c76433a
+    internalID: 0
+    spriteBone:
+    - name: Body
+      position: {x: 232.59045, y: 450.1001, z: 0}
+      rotation: {x: 0, y: 0, z: -0.703972, w: 0.7102277}
+      length: 441.05505
+      parentId: -1
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -794, y: 2650}
+  - name: Left Leg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3858
+      width: 138
+      height: 211
+    spriteID: 8a7051567ecc94a83b8c1b0c038c170f
+    internalID: 0
+    spriteBone:
+    - name: Left_Leg
+      position: {x: 88.80127, y: 204.70752, z: 0}
+      rotation: {x: 0, y: 0, z: -0.7374661, w: 0.67538416}
+      length: 195.2399
+      parentId: -1
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -877, y: 3839}
+  - name: Right Leg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 207
+      y: 3276
+      width: 138
+      height: 211
+    spriteID: 0789d234da5bf4745b50fc0cc3324885
+    internalID: 0
+    spriteBone:
+    - name: Right_Leg
+      position: {x: 65.965454, y: 202.36597, z: 0}
+      rotation: {x: 0, y: 0, z: -0.67938185, w: 0.7337849}
+      length: 199.7498
+      parentId: -1
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -835, y: 3257}
+  platformSettings:
+  - name: Default
+    overridden: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 2048
+  documentSize: {x: 2084, y: 2084}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 2048
+  textureActualHeight: 4096
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Left Ear
+    spriteName: Left Ear
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bc2845ae68eff4b65b49d6e0db367ab3
+    layerID: 28
+    mosaicPosition: {x: 4, y: 2084}
+  - name: Right Ear
+    spriteName: Right Ear
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3f06e0e2d38164389ad0ecc65be5e53d
+    layerID: 24
+    mosaicPosition: {x: 4, y: 1402}
+  - name: Left Arm
+    spriteName: Left Arm
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 491df4bf4321447ad82f15523a1b9c7d
+    layerID: 20
+    mosaicPosition: {x: 4, y: 3565}
+  - name: Right Arm
+    spriteName: Right Arm
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 525a19e152c7a456fb423f1d767c1913
+    layerID: 15
+    mosaicPosition: {x: 4, y: 3276}
+  - name: Head
+    spriteName: Head
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6fd19a0450432457f8040096498ca121
+    layerID: 12
+    mosaicPosition: {x: 4, y: 4}
+  - name: Body
+    spriteName: Body
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 72b7f33e5852042f597875922c76433a
+    layerID: 10
+    mosaicPosition: {x: 4, y: 2766}
+  - name: Left Leg
+    spriteName: Left Leg
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8a7051567ecc94a83b8c1b0c038c170f
+    layerID: 6
+    mosaicPosition: {x: 4, y: 3858}
+  - name: Right Leg
+    spriteName: Right Leg
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0789d234da5bf4745b50fc0cc3324885
+    layerID: 3
+    mosaicPosition: {x: 207, y: 3276}
+  characterData:
+    bones:
+    - name: Body
+      position: {x: 1030.5905, y: 566.1001, z: 0}
+      rotation: {x: 0, y: 0, z: -0.703972, w: 0.7102277}
+      length: 441.05502
+      parentId: -1
+    - name: Right_Leg
+      position: {x: 345.4052, y: 74.32218, z: 0}
+      rotation: {x: 0, y: 0, z: 0.03404821, w: 0.9994202}
+      length: 199.74977
+      parentId: 0
+    - name: Left_Leg
+      position: {x: 341.84128, y: -63.815884, z: 0}
+      rotation: {x: 0, y: 0, z: -0.04831734, w: 0.99883205}
+      length: 195.23991
+      parentId: 0
+    - name: Right_Arm
+      position: {x: 189.26602, y: 204.40173, z: 0}
+      rotation: {x: 0, y: 0, z: 0.22660571, w: 0.97398657}
+      length: 241.99156
+      parentId: 0
+    - name: Left_Arm
+      position: {x: 155.74484, y: -195.93402, z: 0}
+      rotation: {x: 0, y: 0, z: -0.16179876, w: 0.9868238}
+      length: 263.92133
+      parentId: 0
+    - name: Head
+      position: {x: 174.74477, y: 3.235947, z: 0}
+      rotation: {x: 0, y: -0, z: 0.9999444, w: 0.010547518}
+      length: 1350.7568
+      parentId: 0
+    - name: Right_Ear
+      position: {x: 1185.3491, y: -493.32544, z: 0}
+      rotation: {x: 0, y: 0, z: -0.33949506, w: 0.94060785}
+      length: 356.50467
+      parentId: 5
+    - name: Left_Ear
+      position: {x: 1168.094, y: 531.9752, z: 0}
+      rotation: {x: 0, y: 0, z: 0.33035904, w: 0.94385535}
+      length: 328.6462
+      parentId: 5
+    parts:
+    - spritePosition:
+        x: 64
+        y: 1070
+        width: 571
+        height: 674
+      spriteId: bc2845ae68eff4b65b49d6e0db367ab3
+      bones: 07000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 1444
+        y: 1086
+        width: 572
+        height: 674
+      spriteId: 3f06e0e2d38164389ad0ecc65be5e53d
+      bones: 06000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 658
+        y: 151
+        width: 192
+        height: 285
+      spriteId: 491df4bf4321447ad82f15523a1b9c7d
+      bones: 04000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 1191
+        y: 153
+        width: 195
+        height: 281
+      spriteId: 525a19e152c7a456fb423f1d767c1913
+      bones: 03000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 229
+        y: 388
+        width: 1594
+        height: 1390
+      spriteId: 6fd19a0450432457f8040096498ca121
+      bones: 05000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 798
+        y: 116
+        width: 456
+        height: 502
+      spriteId: 72b7f33e5852042f597875922c76433a
+      bones: 00000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 881
+        y: 19
+        width: 138
+        height: 211
+      spriteId: 8a7051567ecc94a83b8c1b0c038c170f
+      bones: 02000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 1042
+        y: 19
+        width: 138
+        height: 211
+      spriteId: 0789d234da5bf4745b50fc0cc3324885
+      bones: 01000000
+      parentGroup: 0
+      order: 0
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: Dog_Final Texture
+  prefabAssetName: Dog_Final Prefab
+  spriteLibAssetName: Dog_Final Sprite Lib
+  secondarySpriteTextures: []

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &792695445286945414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 792695445286945408}
+  - component: {fileID: 792695445286945409}
+  m_Layer: 0
+  m_Name: NPCSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &792695445286945408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792695445286945414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &792695445286945409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792695445286945414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69eeaaff22fc24bbca2323d3cc753e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcPrefabList:
+  - {fileID: 6526349475580728278, guid: abe6ea272e26a41a78853e20d22b7e4c, type: 3}
+  - {fileID: 8637503465479036800, guid: b53cb74b51837478aa5f124102636689, type: 3}
+  - {fileID: 6021339141025239091, guid: 121b90039613c4f7096ee575f02fafcf, type: 3}
+  npc: {fileID: 0}
+  npcPersonalityList: []
+  npcFavItemList: []
+  npcNameList: []
+  npcSpeciesList: []
+  npcPersonality: 
+  npcFavItem: 
+  npcName: 
+  npcSpecies: 
+  sObjects: []

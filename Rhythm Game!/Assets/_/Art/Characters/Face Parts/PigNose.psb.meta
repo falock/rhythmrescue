@@ -1,0 +1,675 @@
+fileFormatVersion: 2
+guid: 30b9db0d264734ebfb697f4b28311981
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 1100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: "path3730-4-3\_+\_path10550-90\_+\_path30189-1\_+\_path30854\_+\_path30856\_+\_path30856-5\_+\_path30878\_+\_path1521-8-1-4-6-7-0-5-1-5-6-3-1-97-2-7-1-6\_+\_path3937-7-48-2\_+\_path1521-8-1-4-6-7-0-5-1-5-6-3-1-97-2-7-5-7-3\_+\_path3937-7-4-6-6"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 4
+      width: 0
+      height: 0
+    spriteID: cbd1e76cac26e4ef799bb2b0fbe926cc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2377}
+  - name: "path15984\_+\_path15984-1\_+\_path8127-5-6-3\_+\_path3149-4-9-9-9-6-1-4-9-2-5-4\_+\_path5946-4-4-6\_+\_path5946-0-7-9-8\_+\_path7986-1-5\_+\_path3626\_+\_path2818-6\_+\_path3628\_+\_path3628-0\_+\_path3149-4-9-9-9-6-1-4-9-2-04\_+\_path5946-4-2\_+\_path5946-0-7-4\_+\_path7986-67\_+..."
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 12
+      width: 0
+      height: 0
+    spriteID: 4318080fd555646689cb54c048eec793
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2369}
+  - name: layer10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 20
+      width: 0
+      height: 0
+    spriteID: b714eba4361004d9eb8b9a795b5e03cb
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2361}
+  - name: "path1538-9-2-1\_+\_path2363-0-2-2\_+\_path8037-4-2-75-7\_+\_path8127-5-6-8\_+\_path14143-0-1"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 28
+      width: 0
+      height: 0
+    spriteID: 933e0947209f2452886549c36fdd445f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2353}
+  - name: "path3149-4-9-9-9-6-1-0-3-2-2-7\_+\_path1688-9-2-8-9\_+\_path565-9-1-6-8\_+\_path1407-9-8-3-7\_+\_path1409-9-7-6-4\_+\_path1411-1-8-3-1\_+\_path2014-5-7-7-0-7\_+\_path1407-4-2-7-8-6\_+\_path1409-3-3-4-4-0\_+\_path1411-9-6-4-0-2\_+\_path1926-3-9-4-2\_+\_path1926-0-8-8-0-9\_+\_p..."
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 36
+      width: 0
+      height: 0
+    spriteID: fc994c2d1e28f475e9f0baf2c7969a93
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2345}
+  - name: "path1538-2-4\_+\_path2363-2-4\_+\_path8037-4-2-75\_+\_path8127-5-6\_+\_path4940-1-5-0-5-39"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 44
+      width: 0
+      height: 0
+    spriteID: 9961c49edd5e84c19be7cbe30ae28aa1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2337}
+  - name: "path4940-1-5-0-9\_+\_path1506-5-7-8-3-4-5-9-6-8\_+\_path1506-5-7-8-3-4-5-9-1-3-4\_+\_path9620-6-7\_+\_path19717-0\_+\_path19759\_+\_path19761\_+\_path8946-5-4\_+\_path8946-8-9-7\_+\_path19315-0\_+\_path15820-8-5-3\_+\_path15820-8-5-3-1\_+\_path8946-5-4-2\_+\_path8946-8-9-7-5\_+\_..."
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 52
+      width: 0
+      height: 0
+    spriteID: b25dbf8881831438986eb86f923ff5f9
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2329}
+  - name: "path3937-5-1-34\_+\_path1521-5-1-5-9-5-4-5-6-6-5-5-4-1\_+\_path17017-0\_+\_path17019-4\_+\_path1521-5-1-5-9-5-4-7-00-4-6-1-0-4\_+\_path3937-5\_+\_path10231\_+\_path10233\_+\_path10235\_+\_path1521-5-1-5-9-5-4-7-00-4-6-1-0-4-2\_+\_path3937-5-1\_+\_rect31336\_+\_path1521-88-1-6..."
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 60
+      width: 0
+      height: 0
+    spriteID: 8ae508f97c36e410fa00c7a7d45806ce
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2321}
+  - name: "path1521-88-1-6-4-4-2-7-7-2-2-5-2-4-19\_+\_path1521-88-1-6-4-4-2-7-7-2-2-5-2-4-19-0\_+\_path1521-88-1-6-4-4-2-7-7-2-2-5-8-2-8\_+\_path1521-88-1-6-4-4-2-7-7-2-2-5-8-2-8-5\_+\_path1521-5-1-5-9-5-4-5-6-6-5-6-7-8-3-4-2-4\_+\_path15888-2-8-4-5\_+\_path15890-7-3-5-7\_+\_p..."
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 68
+      width: 0
+      height: 0
+    spriteID: 4f8a860f3937141b1b5ec403ea3596e4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2313}
+  - name: "path3511-9-8-5-8-7-6-1-6\_+\_path5942\_+\_path5946\_+\_path5946-0\_+\_path1521-5-1-5-9-5-4-5-6-6-5-6-7-8-3-4\_+\_path15888-2-8\_+\_path15890-7-3\_+\_path1521-88-1-6-4-4-2-7-7-2-2-5-8-7"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 888
+      height: 504
+    spriteID: 37a8f5875b2bb4262be96272881aafda
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -750, y: -73}
+  - name: "path1521-5-1-5-9-5-4-5-6-6-5-6-7-0\_+\_path1521-5-1-5-9-5-4-5-6-6-5-6-7-0-8\_+\_path1521-5-1-5-9-5-4-5-6-6-5-5-0-3\_+\_path1521-5-1-5-9-5-4-5-6-6-5-5-0-3-3\_+\_path1521-5-1-5-9-5-4-5-6-6-5-6-7-8-39-2-3\_+\_path15888-3-6-9\_+\_path15890-2-0-1\_+\_path1521-5-1-5-9-5-4..."
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 76
+      width: 0
+      height: 0
+    spriteID: 902de786fa3cb4f1ca3e539929dc1ba8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2305}
+  - name: layer1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 84
+      width: 0
+      height: 0
+    spriteID: df259fbeb405c4d1a9f5bda20a9038e0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2297}
+  - name: "path1462-1\_+\_path1392-0\_+\_path1404-0-3-5-6-6\_+\_path660-5-6-5-2\_+\_path17054\_+\_path17077\_+\_path30656\_+\_path660-5-6-5-1\_+\_path9044-1-4-1-3\_+\_path10197\_+\_path10199\_+\_path10201\_+\_path10203\_+\_path10205\_+\_path10207\_+\_path10209\_+\_path10211\_+\_path10213\_+\_path10..."
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 92
+      width: 0
+      height: 0
+    spriteID: 7e9b3be56f78e406ea735939c3a00f77
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2289}
+  - name: "path3497\_+\_path1404-0-3-5-6-28\_+\_path660-5-6-5-4\_+\_path16010-7\_+\_path6129\_+\_path660-5-6-5-6\_+\_path660-5-6-5-69\_+\_path19189-1\_+\_path660-5-6-5-69-7\_+\_path1404-0-3-5-6-5-8-2\_+\_path660-5-6-5-69-7-3\_+\_path660-5-6-4-6-6-6-2-5\_+\_path660-5-6-4-6-86\_+\_path14137..."
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 100
+      width: 0
+      height: 0
+    spriteID: 2a2eeb7f4151e41c49edbca956e407b7
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2281}
+  - name: "path3937-7-4-6-4\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-79-4\_+\_path1521-8-1-4-6-7-0-5-1-5-6-3-1-97-2-7-5\_+\_path3937-7-4\_+\_path1521-8-1-4-6-7-0-5-1-5-6-3-1-97-2-7-5-7\_+\_path3937-7-4-6\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-79-44"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 108
+      width: 0
+      height: 0
+    spriteID: 1841e2547a1a14c71adc157b1687d374
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2273}
+  - name: "path1521-8-1-0-0-1-4-6-4-9-9-8-0-7-3-8\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-7-3-8-6\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-79-6-8\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-79-6-8-6"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 116
+      width: 0
+      height: 0
+    spriteID: 84f5ad30d032c4e14a3655d2cc6d6923
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2265}
+  - name: "path1521-8-1-4-6-7-0-5-1-5-9-9-8-9-2-3-3\_+\_path1521-8-1-4-6-7-0-5-1-5-9-9-8-9-2-3-3-2\_+\_path1521-8-1-4-6-7-0-5-1-5-9-9-8-9-0-11-8\_+\_path1521-8-1-4-6-7-0-5-1-5-9-9-8-9-0-11-8-0"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 900
+      y: 124
+      width: 0
+      height: 0
+    spriteID: ec945c59e8ca14a88be8ac44d616a445
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1497, y: -2257}
+  platformSettings:
+  - name: Default
+    overridden: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 1024
+  documentSize: {x: 2397, y: 2381}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 1024
+  textureActualHeight: 1024
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: svg16
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 31
+    mosaicPosition: {x: 0, y: 0}
+  - name: layer5
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: 29
+    mosaicPosition: {x: 0, y: 0}
+  - name: "path3730-4-3\_+\_path10550-90\_+\_path30189-1\_+\_path30854\_+\_path30856\_+\_path30856-5\_+\_path30878\_+\_path1521-8-1-4-6-7-0-5-1-5-6-3-1-97-2-7-1-6\_+\_path3937-7-48-2\_+\_path1521-8-1-4-6-7-0-5-1-5-6-3-1-97-2-7-5-7-3\_+\_path3937-7-4-6-6"
+    spriteName: "path3730-4-3\_+\_path10550-90\_+\_path30189-1\_+\_path30854\_+\_path30856\_+\_path30856-5\_+\_path30878\_+\_path1521-8-1-4-6-7-0-5-1-5-6-3-1-97-2-7-1-6\_+\_path3937-7-48-2\_+\_path1521-8-1-4-6-7-0-5-1-5-6-3-1-97-2-7-5-7-3\_+\_path3937-7-4-6-6"
+    isGroup: 0
+    parentIndex: 1
+    spriteID: cbd1e76cac26e4ef799bb2b0fbe926cc
+    layerID: 28
+    mosaicPosition: {x: 900, y: 4}
+  - name: "path15984\_+\_path15984-1\_+\_path8127-5-6-3\_+\_path3149-4-9-9-9-6-1-4-9-2-5-4\_+\_path5946-4-4-6\_+\_path5946-0-7-9-8\_+\_path7986-1-5\_+\_path3626\_+\_path2818-6\_+\_path3628\_+\_path3628-0\_+\_path3149-4-9-9-9-6-1-4-9-2-04\_+\_path5946-4-2\_+\_path5946-0-7-4\_+\_path7986-67\_+..."
+    spriteName: "path15984\_+\_path15984-1\_+\_path8127-5-6-3\_+\_path3149-4-9-9-9-6-1-4-9-2-5-4\_+\_path5946-4-4-6\_+\_path5946-0-7-9-8\_+\_path7986-1-5\_+\_path3626\_+\_path2818-6\_+\_path3628\_+\_path3628-0\_+\_path3149-4-9-9-9-6-1-4-9-2-04\_+\_path5946-4-2\_+\_path5946-0-7-4\_+\_path7986-67\_+..."
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 4318080fd555646689cb54c048eec793
+    layerID: 27
+    mosaicPosition: {x: 900, y: 12}
+  - name: layer10
+    spriteName: layer10
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b714eba4361004d9eb8b9a795b5e03cb
+    layerID: 26
+    mosaicPosition: {x: 900, y: 20}
+  - name: layer3
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 24
+    mosaicPosition: {x: 0, y: 0}
+  - name: "path1538-9-2-1\_+\_path2363-0-2-2\_+\_path8037-4-2-75-7\_+\_path8127-5-6-8\_+\_path14143-0-1"
+    spriteName: "path1538-9-2-1\_+\_path2363-0-2-2\_+\_path8037-4-2-75-7\_+\_path8127-5-6-8\_+\_path14143-0-1"
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 933e0947209f2452886549c36fdd445f
+    layerID: 23
+    mosaicPosition: {x: 900, y: 28}
+  - name: "path3149-4-9-9-9-6-1-0-3-2-2-7\_+\_path1688-9-2-8-9\_+\_path565-9-1-6-8\_+\_path1407-9-8-3-7\_+\_path1409-9-7-6-4\_+\_path1411-1-8-3-1\_+\_path2014-5-7-7-0-7\_+\_path1407-4-2-7-8-6\_+\_path1409-3-3-4-4-0\_+\_path1411-9-6-4-0-2\_+\_path1926-3-9-4-2\_+\_path1926-0-8-8-0-9\_+\_p..."
+    spriteName: "path3149-4-9-9-9-6-1-0-3-2-2-7\_+\_path1688-9-2-8-9\_+\_path565-9-1-6-8\_+\_path1407-9-8-3-7\_+\_path1409-9-7-6-4\_+\_path1411-1-8-3-1\_+\_path2014-5-7-7-0-7\_+\_path1407-4-2-7-8-6\_+\_path1409-3-3-4-4-0\_+\_path1411-9-6-4-0-2\_+\_path1926-3-9-4-2\_+\_path1926-0-8-8-0-9\_+\_p..."
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fc994c2d1e28f475e9f0baf2c7969a93
+    layerID: 22
+    mosaicPosition: {x: 900, y: 36}
+  - name: layer2
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 20
+    mosaicPosition: {x: 0, y: 0}
+  - name: "path1538-2-4\_+\_path2363-2-4\_+\_path8037-4-2-75\_+\_path8127-5-6\_+\_path4940-1-5-0-5-39"
+    spriteName: "path1538-2-4\_+\_path2363-2-4\_+\_path8037-4-2-75\_+\_path8127-5-6\_+\_path4940-1-5-0-5-39"
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 9961c49edd5e84c19be7cbe30ae28aa1
+    layerID: 19
+    mosaicPosition: {x: 900, y: 44}
+  - name: "path4940-1-5-0-9\_+\_path1506-5-7-8-3-4-5-9-6-8\_+\_path1506-5-7-8-3-4-5-9-1-3-4\_+\_path9620-6-7\_+\_path19717-0\_+\_path19759\_+\_path19761\_+\_path8946-5-4\_+\_path8946-8-9-7\_+\_path19315-0\_+\_path15820-8-5-3\_+\_path15820-8-5-3-1\_+\_path8946-5-4-2\_+\_path8946-8-9-7-5\_+\_..."
+    spriteName: "path4940-1-5-0-9\_+\_path1506-5-7-8-3-4-5-9-6-8\_+\_path1506-5-7-8-3-4-5-9-1-3-4\_+\_path9620-6-7\_+\_path19717-0\_+\_path19759\_+\_path19761\_+\_path8946-5-4\_+\_path8946-8-9-7\_+\_path19315-0\_+\_path15820-8-5-3\_+\_path15820-8-5-3-1\_+\_path8946-5-4-2\_+\_path8946-8-9-7-5\_+\_..."
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b25dbf8881831438986eb86f923ff5f9
+    layerID: 18
+    mosaicPosition: {x: 900, y: 52}
+  - name: layer6
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+  - name: "path3937-5-1-34\_+\_path1521-5-1-5-9-5-4-5-6-6-5-5-4-1\_+\_path17017-0\_+\_path17019-4\_+\_path1521-5-1-5-9-5-4-7-00-4-6-1-0-4\_+\_path3937-5\_+\_path10231\_+\_path10233\_+\_path10235\_+\_path1521-5-1-5-9-5-4-7-00-4-6-1-0-4-2\_+\_path3937-5-1\_+\_rect31336\_+\_path1521-88-1-6..."
+    spriteName: "path3937-5-1-34\_+\_path1521-5-1-5-9-5-4-5-6-6-5-5-4-1\_+\_path17017-0\_+\_path17019-4\_+\_path1521-5-1-5-9-5-4-7-00-4-6-1-0-4\_+\_path3937-5\_+\_path10231\_+\_path10233\_+\_path10235\_+\_path1521-5-1-5-9-5-4-7-00-4-6-1-0-4-2\_+\_path3937-5-1\_+\_rect31336\_+\_path1521-88-1-6..."
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 8ae508f97c36e410fa00c7a7d45806ce
+    layerID: 15
+    mosaicPosition: {x: 900, y: 60}
+  - name: "path1521-88-1-6-4-4-2-7-7-2-2-5-2-4-19\_+\_path1521-88-1-6-4-4-2-7-7-2-2-5-2-4-19-0\_+\_path1521-88-1-6-4-4-2-7-7-2-2-5-8-2-8\_+\_path1521-88-1-6-4-4-2-7-7-2-2-5-8-2-8-5\_+\_path1521-5-1-5-9-5-4-5-6-6-5-6-7-8-3-4-2-4\_+\_path15888-2-8-4-5\_+\_path15890-7-3-5-7\_+\_p..."
+    spriteName: "path1521-88-1-6-4-4-2-7-7-2-2-5-2-4-19\_+\_path1521-88-1-6-4-4-2-7-7-2-2-5-2-4-19-0\_+\_path1521-88-1-6-4-4-2-7-7-2-2-5-8-2-8\_+\_path1521-88-1-6-4-4-2-7-7-2-2-5-8-2-8-5\_+\_path1521-5-1-5-9-5-4-5-6-6-5-6-7-8-3-4-2-4\_+\_path15888-2-8-4-5\_+\_path15890-7-3-5-7\_+\_p..."
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4f8a860f3937141b1b5ec403ea3596e4
+    layerID: 14
+    mosaicPosition: {x: 900, y: 68}
+  - name: "path3511-9-8-5-8-7-6-1-6\_+\_path5942\_+\_path5946\_+\_path5946-0\_+\_path1521-5-1-5-9-5-4-5-6-6-5-6-7-8-3-4\_+\_path15888-2-8\_+\_path15890-7-3\_+\_path1521-88-1-6-4-4-2-7-7-2-2-5-8-7"
+    spriteName: "path3511-9-8-5-8-7-6-1-6\_+\_path5942\_+\_path5946\_+\_path5946-0\_+\_path1521-5-1-5-9-5-4-5-6-6-5-6-7-8-3-4\_+\_path15888-2-8\_+\_path15890-7-3\_+\_path1521-88-1-6-4-4-2-7-7-2-2-5-8-7"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 37a8f5875b2bb4262be96272881aafda
+    layerID: 13
+    mosaicPosition: {x: 4, y: 4}
+  - name: "path1521-5-1-5-9-5-4-5-6-6-5-6-7-0\_+\_path1521-5-1-5-9-5-4-5-6-6-5-6-7-0-8\_+\_path1521-5-1-5-9-5-4-5-6-6-5-5-0-3\_+\_path1521-5-1-5-9-5-4-5-6-6-5-5-0-3-3\_+\_path1521-5-1-5-9-5-4-5-6-6-5-6-7-8-39-2-3\_+\_path15888-3-6-9\_+\_path15890-2-0-1\_+\_path1521-5-1-5-9-5-4..."
+    spriteName: "path1521-5-1-5-9-5-4-5-6-6-5-6-7-0\_+\_path1521-5-1-5-9-5-4-5-6-6-5-6-7-0-8\_+\_path1521-5-1-5-9-5-4-5-6-6-5-5-0-3\_+\_path1521-5-1-5-9-5-4-5-6-6-5-5-0-3-3\_+\_path1521-5-1-5-9-5-4-5-6-6-5-6-7-8-39-2-3\_+\_path15888-3-6-9\_+\_path15890-2-0-1\_+\_path1521-5-1-5-9-5-4..."
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 902de786fa3cb4f1ca3e539929dc1ba8
+    layerID: 12
+    mosaicPosition: {x: 900, y: 76}
+  - name: layer1
+    spriteName: layer1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: df259fbeb405c4d1a9f5bda20a9038e0
+    layerID: 11
+    mosaicPosition: {x: 900, y: 84}
+  - name: layer4
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+  - name: "path1462-1\_+\_path1392-0\_+\_path1404-0-3-5-6-6\_+\_path660-5-6-5-2\_+\_path17054\_+\_path17077\_+\_path30656\_+\_path660-5-6-5-1\_+\_path9044-1-4-1-3\_+\_path10197\_+\_path10199\_+\_path10201\_+\_path10203\_+\_path10205\_+\_path10207\_+\_path10209\_+\_path10211\_+\_path10213\_+\_path10..."
+    spriteName: "path1462-1\_+\_path1392-0\_+\_path1404-0-3-5-6-6\_+\_path660-5-6-5-2\_+\_path17054\_+\_path17077\_+\_path30656\_+\_path660-5-6-5-1\_+\_path9044-1-4-1-3\_+\_path10197\_+\_path10199\_+\_path10201\_+\_path10203\_+\_path10205\_+\_path10207\_+\_path10209\_+\_path10211\_+\_path10213\_+\_path10..."
+    isGroup: 0
+    parentIndex: 17
+    spriteID: 7e9b3be56f78e406ea735939c3a00f77
+    layerID: 8
+    mosaicPosition: {x: 900, y: 92}
+  - name: "path3497\_+\_path1404-0-3-5-6-28\_+\_path660-5-6-5-4\_+\_path16010-7\_+\_path6129\_+\_path660-5-6-5-6\_+\_path660-5-6-5-69\_+\_path19189-1\_+\_path660-5-6-5-69-7\_+\_path1404-0-3-5-6-5-8-2\_+\_path660-5-6-5-69-7-3\_+\_path660-5-6-4-6-6-6-2-5\_+\_path660-5-6-4-6-86\_+\_path14137..."
+    spriteName: "path3497\_+\_path1404-0-3-5-6-28\_+\_path660-5-6-5-4\_+\_path16010-7\_+\_path6129\_+\_path660-5-6-5-6\_+\_path660-5-6-5-69\_+\_path19189-1\_+\_path660-5-6-5-69-7\_+\_path1404-0-3-5-6-5-8-2\_+\_path660-5-6-5-69-7-3\_+\_path660-5-6-4-6-6-6-2-5\_+\_path660-5-6-4-6-86\_+\_path14137..."
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2a2eeb7f4151e41c49edbca956e407b7
+    layerID: 7
+    mosaicPosition: {x: 900, y: 100}
+  - name: layer8
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 5
+    mosaicPosition: {x: 0, y: 0}
+  - name: "path3937-7-4-6-4\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-79-4\_+\_path1521-8-1-4-6-7-0-5-1-5-6-3-1-97-2-7-5\_+\_path3937-7-4\_+\_path1521-8-1-4-6-7-0-5-1-5-6-3-1-97-2-7-5-7\_+\_path3937-7-4-6\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-79-44"
+    spriteName: "path3937-7-4-6-4\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-79-4\_+\_path1521-8-1-4-6-7-0-5-1-5-6-3-1-97-2-7-5\_+\_path3937-7-4\_+\_path1521-8-1-4-6-7-0-5-1-5-6-3-1-97-2-7-5-7\_+\_path3937-7-4-6\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-79-44"
+    isGroup: 0
+    parentIndex: 20
+    spriteID: 1841e2547a1a14c71adc157b1687d374
+    layerID: 4
+    mosaicPosition: {x: 900, y: 108}
+  - name: "path1521-8-1-0-0-1-4-6-4-9-9-8-0-7-3-8\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-7-3-8-6\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-79-6-8\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-79-6-8-6"
+    spriteName: "path1521-8-1-0-0-1-4-6-4-9-9-8-0-7-3-8\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-7-3-8-6\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-79-6-8\_+\_path1521-8-1-0-0-1-4-6-4-9-9-8-0-79-6-8-6"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 84f5ad30d032c4e14a3655d2cc6d6923
+    layerID: 3
+    mosaicPosition: {x: 900, y: 116}
+  - name: "path1521-8-1-4-6-7-0-5-1-5-9-9-8-9-2-3-3\_+\_path1521-8-1-4-6-7-0-5-1-5-9-9-8-9-2-3-3-2\_+\_path1521-8-1-4-6-7-0-5-1-5-9-9-8-9-0-11-8\_+\_path1521-8-1-4-6-7-0-5-1-5-9-9-8-9-0-11-8-0"
+    spriteName: "path1521-8-1-4-6-7-0-5-1-5-9-9-8-9-2-3-3\_+\_path1521-8-1-4-6-7-0-5-1-5-9-9-8-9-2-3-3-2\_+\_path1521-8-1-4-6-7-0-5-1-5-9-9-8-9-0-11-8\_+\_path1521-8-1-4-6-7-0-5-1-5-9-9-8-9-0-11-8-0"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ec945c59e8ca14a88be8ac44d616a445
+    layerID: 2
+    mosaicPosition: {x: 900, y: 124}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: PigNose Texture
+  prefabAssetName: PigNose Prefab
+  spriteLibAssetName: PigNose Sprite Lib
+  secondarySpriteTextures: []
