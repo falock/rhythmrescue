@@ -11,27 +11,19 @@ public class TeamPanel : MonoBehaviour
     [SerializeField] public TeamSlot[] teamSlots;
     public List<int> teamMembers = new List<int>();
     public GameObject teamPrefab;
-    private List<float> posX = new List<float>();
-    private List<float> posY = new List<float>();
+    private List<Transform> pos = new List<Transform>();
     private string[] personalityString = new string[] { "Class Clown", "Brave", "Shy", "Caring", "Rebel" };
+
+    private CampObject campObject;
+    private Transform campTransform;
+
+    private List<Transform> tempPositions = new List<Transform>();
     // This is for if you have
     //[SerializeField] EquipmentType equipmentType;
 
 private void Start()
     {
-        posX.Add(-7.3f);
-        posX.Add(1.12f);
-        posX.Add(7.24f);
-        posX.Add(5.48f);
-        posX.Add(1.21f);
-        posX.Add(-4.59f);
 
-        posY.Add(1);
-        posY.Add(0.16f);
-        posY.Add(0.45f);
-        posY.Add(-3.08f);
-        posY.Add(-1.94f);
-        posY.Add(-3.02f);
     }
     public void OnValidate()
     {
@@ -72,28 +64,37 @@ private void Start()
 
     public void SpawnTeamMembersCamp()
     {
+        /*
+        for (int j = 0; j < CampObjectManager.current.npcSpawnLocation.Count; j++)
+        {
+            for (int k = 0; k < CampObjectManager.current.npcSpawnLocation[j].transform.childCount; k++)
+            {
+                pos.Add(CampObjectManager.current.npcSpawnLocation[j].transform.GetChild(k).transform);
+            }
+        }
+        */
+
         for (int i = 0; i < teamSlots.Length; i++)
         {
-            var x = posX[Random.Range(0, posX.Count -1)];
-            var y = posY[Random.Range(0, posY.Count -1)];
-            teamSlots[i].SpawnThisNPCCamp(x, y);
-            posX.Remove(x);
-            posY.Remove(y);
+            Debug.Log("in Team Panel, about to go into if state");
+            var choice = Random.Range(0, 2);
+            Debug.Log(choice);
+            if (choice == 0)
+            {
+                Debug.Log("Just calld spawn from choice 0");
+                CampObjectManager.current.Interactable(out campObject);
+                Debug.Log("past getting campobjman");
+                teamSlots[i].SpawnThisNPCCamp(campObject, campObject.gameObject.transform);
+            }
+            else
+            {
+                Debug.Log("Just calld spawn from choice 1");
+                CampObjectManager.current.JustPosition(out campTransform);
+                Debug.Log("past getting campobjman");
+                teamSlots[i].SpawnThisNPCCamp(null, campTransform);
+            }
         }
 
-        posX.Add(-7.3f);
-        posX.Add(1.12f);
-        posX.Add(7.24f);
-        posX.Add(5.48f);
-        posX.Add(1.21f);
-        posX.Add(-4.59f);
-
-        posY.Add(1);
-        posY.Add(0.16f);
-        posY.Add(0.45f);
-        posY.Add(-3.08f);
-        posY.Add(-1.94f);
-        posY.Add(-3.02f);
     }
 
     public void SpawnTeamMembersRhythm()

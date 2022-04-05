@@ -133,11 +133,12 @@ public class TeamSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         GameObject npc = Instantiate(npcPrefab, parent.transform.position, Quaternion.identity, parent) as GameObject;
     }
 
-    public void SpawnThisNPCCamp(float x, float y)
+    public void SpawnThisNPCCamp(CampObject obj, Transform pos)
     {
         //Instantiate(npcPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         // instantiate player
         // var npcCharacter = Resources.Load("NPCPrefabs/Starters/" + prefab);
+        Debug.Log("Now in TeamSlot");
         npcPrefab = Resources.Load("NPCPrefabs/Starters/" + prefab) as GameObject;
         npcScript = npcPrefab.GetComponent<_NPC>();
         npcScript.nickname = nickname;
@@ -145,7 +146,17 @@ public class TeamSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         npcScript.prefabName = prefab;
         npcScript.hasBeenTalkedTo = hasBeenTalkedTo;
         npcScript.hasBeenAdded = true;
-        Instantiate(npcPrefab, new Vector2(x, y), Quaternion.identity);
+        if (obj != null)
+        {
+            Instantiate(npcPrefab, new Vector2(obj.gameObject.transform.position.x, obj.gameObject.transform.position.y), Quaternion.identity);
+            npcPrefab.GetComponent<NPCController>().ChooseCampActivity(obj);
+            Debug.Log("Just called to spawn while interacting");
+        }
+        if (pos != null)
+        {
+            Instantiate(npcPrefab, new Vector2(pos.position.x, pos.position.y), Quaternion.identity);
+            Debug.Log("Just called to spawn walking");
+        }
     }
 
 

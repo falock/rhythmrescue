@@ -422,4 +422,11 @@ public class InventoryManager : MonoBehaviour
     {
         friendList.RefreshGrid();
     }
+
+    public void DoYouWantToSave()
+    {
+        notificationPanel.SetActive(true);
+        notificationText.text = "Do you want to save?";
+
+    }
 }

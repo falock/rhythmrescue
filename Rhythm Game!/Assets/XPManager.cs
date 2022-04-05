@@ -10,10 +10,10 @@ public class XPManager : MonoBehaviour
     public static XPManager instance;
 
     // How much XP is needed to get to the next level, calculated in IncreaseExperience();
-    private float xpToNextLevel;
+    public float xpToNextLevel;
     // store the player's full experience, used when the player has finished a level
     // and has a LOT of XP that goes over the level up threshold
-    private float playerXP;
+    public float playerXP;
     // how much XP the player currently has
     public float shownPlayerXP;
     // store the player's level, starts at 1
@@ -30,7 +30,7 @@ public class XPManager : MonoBehaviour
     public GameObject levelUp;
 
     // if the Update() should run
-    private bool checkingXP;
+    public bool checkingXP;
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +64,7 @@ public class XPManager : MonoBehaviour
         // Check to see if the XP should go to the next level or if it should just increase a bit
         if (playerXP >= xpToNextLevel)
         {
+            playerXP = playerXP - xpToNextLevel;
             targetProgress = 1;
             checkingXP = true;
         }
@@ -104,11 +105,12 @@ public class XPManager : MonoBehaviour
             IncreaseExperience(0);
 
             // Turn off checkingXP so Update() doesn't happen anymore
-            checkingXP = false;
+            //checkingXP = false;
         }
         else if (progressSlider.value == targetProgress)
         {
             // The player slider is now done updating since it is equal to the current target progress, update the XP display and finish
+            IncreaseExperience(0);
             CalculatePlayerXP();
             checkingXP = false;
         }

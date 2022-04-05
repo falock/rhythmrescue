@@ -36,6 +36,7 @@ public class NPCController : MonoBehaviour
 
     public bool isActive = false;
     public const string camp = "Camp";
+    public bool isInteractingWithCampObject;
 
     public Animator anim;
 
@@ -78,7 +79,6 @@ public class NPCController : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player");
             dialogueTriggerBox.SetActive(true);
             //walkArea =
-
         }
     }
 
@@ -109,7 +109,7 @@ public class NPCController : MonoBehaviour
         }
 
         // y = -180 if left
-        if (isActive)
+        if (isActive && !isInteractingWithCampObject)
         {
             // Move the object in the chosen direction at the set speed
             thisTransform.position += moveDirections[currentMoveDirection] * Time.deltaTime * runSpeed;
@@ -193,5 +193,11 @@ public class NPCController : MonoBehaviour
                 mouths[j].SetActive(false);
             }
         }
+    }
+
+    public void ChooseCampActivity(CampObject obj)
+    {
+        isInteractingWithCampObject = true;
+        anim.SetBool(obj.animationType.ToString(), true);
     }
 }
