@@ -31,6 +31,7 @@ public class PlayerSelection : MonoBehaviour
     public GameObject[] teamIcons;
     public TextMeshProUGUI dropdownChild;
     public GameObject selectedTeam;
+    public GameObject teamConfirmButton;
 
     [Header("Confirm Selection Screen")]
     // w
@@ -62,6 +63,21 @@ public class PlayerSelection : MonoBehaviour
         teamInt = 0;
 
         playerParent.transform.GetChild(playerInt).position = playerSelection.transform.Find("Image").position;
+    }
+
+    public void Update()
+    {
+        if(chooseTeamPage.activeInHierarchy)
+        {
+            if(teamNickname.Count < 4)
+            {
+                teamConfirmButton.SetActive(false);
+            }
+            else if (teamNickname.Count == 4)
+            {
+                teamConfirmButton.SetActive(true);
+            }
+        }
     }
     public void StartGame()
     {

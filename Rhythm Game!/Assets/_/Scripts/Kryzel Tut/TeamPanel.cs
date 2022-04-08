@@ -76,22 +76,16 @@ private void Start()
 
         for (int i = 0; i < teamSlots.Length; i++)
         {
-            Debug.Log("in Team Panel, about to go into if state");
             var choice = Random.Range(0, 2);
-            Debug.Log(choice);
             if (choice == 0)
             {
-                Debug.Log("Just calld spawn from choice 0");
-                CampObjectManager.current.Interactable(out campObject);
-                Debug.Log("past getting campobjman");
-                teamSlots[i].SpawnThisNPCCamp(campObject, campObject.gameObject.transform);
+                var spawn = CampObjectManager.current.Interactable();
+                teamSlots[i].SpawnThisNPCCamp(spawn, null);
             }
             else
             {
-                Debug.Log("Just calld spawn from choice 1");
-                CampObjectManager.current.JustPosition(out campTransform);
-                Debug.Log("past getting campobjman");
-                teamSlots[i].SpawnThisNPCCamp(null, campTransform);
+                var spawn = CampObjectManager.current.JustPosition();
+                teamSlots[i].SpawnThisNPCCamp(null, spawn);
             }
         }
 

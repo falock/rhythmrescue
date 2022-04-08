@@ -6268,7 +6268,7 @@ GameObject:
   - component: {fileID: 514425686}
   - component: {fileID: 514425685}
   m_Layer: 5
-  m_Name: Confirm
+  m_Name: Team Confirm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11500,6 +11500,7 @@ MonoBehaviour:
   - {fileID: 963199336}
   dropdownChild: {fileID: 524198101}
   selectedTeam: {fileID: 0}
+  teamConfirmButton: {fileID: 514425683}
   teamMemberPositions:
   - {fileID: 1237204247}
   - {fileID: 467202781}
@@ -18708,12 +18709,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aedbee6c5603941f8ac7407f7a5d14f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xpToNextLevel: 0
+  playerXP: 0
   shownPlayerXP: 0
   playerLevel: 1
   fillSpeed: 0.5
   targetProgress: 0
   xpText: {fileID: 0}
   levelUp: {fileID: 0}
+  checkingXP: 0
 --- !u!1 &1733738968
 GameObject:
   m_ObjectHideFlags: 0

@@ -85,6 +85,10 @@ public class NPCController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(isInteractingWithCampObject)
+        {
+            anim.SetBool("Sit", true);
+        }
         if (this.transform.localRotation.x != 0 || this.transform.localRotation.z != 0)
         {
             this.gameObject.transform.localRotation = Quaternion.identity;
@@ -197,7 +201,12 @@ public class NPCController : MonoBehaviour
 
     public void ChooseCampActivity(CampObject obj)
     {
+        if(anim == null)
+        {
+            anim = GetComponentInChildren<Animator>();
+            anim.gameObject.SetActive(true);
+        }
         isInteractingWithCampObject = true;
-        anim.SetBool(obj.animationType.ToString(), true);
+        anim.SetBool("Sit", true);
     }
 }

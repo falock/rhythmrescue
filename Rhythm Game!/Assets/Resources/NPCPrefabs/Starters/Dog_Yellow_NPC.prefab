@@ -551,6 +551,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2347806491056201557, guid: 3ea98a635674049dca1dc9bea7394957,
         type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1602466630739757137}
+    - target: {fileID: 2347806491056201557, guid: 3ea98a635674049dca1dc9bea7394957,
+        type: 3}
       propertyPath: visualCue
       value: 
       objectReference: {fileID: 1813839171742411118}
@@ -594,6 +599,11 @@ PrefabInstance:
       propertyPath: mouths.Array.data[2]
       value: 
       objectReference: {fileID: 122143357663363742}
+    - target: {fileID: 2347806491056201557, guid: 3ea98a635674049dca1dc9bea7394957,
+        type: 3}
+      propertyPath: isInteractingWithCampObject
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4744310417003567901, guid: 3ea98a635674049dca1dc9bea7394957,
         type: 3}
       propertyPath: m_RootOrder
@@ -613,7 +623,7 @@ PrefabInstance:
     - target: {fileID: 6995638935881714866, guid: 3ea98a635674049dca1dc9bea7394957,
         type: 3}
       propertyPath: nickname
-      value: F
+      value: N
       objectReference: {fileID: 0}
     - target: {fileID: 6995638935881714866, guid: 3ea98a635674049dca1dc9bea7394957,
         type: 3}
@@ -623,7 +633,7 @@ PrefabInstance:
     - target: {fileID: 6995638935881714866, guid: 3ea98a635674049dca1dc9bea7394957,
         type: 3}
       propertyPath: personality
-      value: Brave
+      value: Class Clown
       objectReference: {fileID: 0}
     - target: {fileID: 6995638935881714866, guid: 3ea98a635674049dca1dc9bea7394957,
         type: 3}

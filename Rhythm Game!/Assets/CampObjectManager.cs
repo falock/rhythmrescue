@@ -29,6 +29,7 @@ public class CampObjectManager : MonoBehaviour
 
     private void Awake()
     {
+        current = this;
         // Sets up the 4 Object Parents and disables them if none of their children are active
         for (int i = 0; i < transform.GetChild(0).childCount; i++)
         {
@@ -38,7 +39,7 @@ public class CampObjectManager : MonoBehaviour
                 objectParent[i].SetActive(false);
             }
         }
-
+        npcSpawnLocation.Clear();
         // Filters through what game objects are active, then what children are active and if to save them
         // if the game object ISN'T active, it will simply add its transform as a general spawn point
         for (int i = 0; i < objectParent.Length; i++)
@@ -49,7 +50,7 @@ public class CampObjectManager : MonoBehaviour
                 {
                     var child = objectParent[i].transform.GetChild(j).gameObject;
 
-                    if (child.activeInHierarchy == true && child.GetComponent<CampObject>().npcSpawnLocation && child != null)
+                    if (child.activeInHierarchy == true && child.GetComponent<CampObject>().npcSpawnLocation)
                     {
                         npcSpawnLocation.Add(child.GetComponent<CampObject>());
                     }
@@ -83,13 +84,19 @@ public class CampObjectManager : MonoBehaviour
         return false;
     }
 
-    public void Interactable(out CampObject obj)
+    public CampObject Interactable()
     {
-        obj = npcSpawnLocation[4];
+        Debug.Log("inside COM");
+        var randomNumber = Random.Range(0, npcSpawnLocation.Count);
+        Debug.Log("number: " + randomNumber);
+        return npcSpawnLocation[randomNumber];
     }
 
-    public void JustPosition(out Transform pos)
+    public Transform JustPosition()
     {
-        pos = generalSpawnPoint[Random.Range(0, generalSpawnPoint.Count)];
+        Debug.Log("inside COM");
+        var randomNumber = Random.Range(0, generalSpawnPoint.Count);
+        Debug.Log("number: " + randomNumber);
+        return generalSpawnPoint[randomNumber];
     }
 }
