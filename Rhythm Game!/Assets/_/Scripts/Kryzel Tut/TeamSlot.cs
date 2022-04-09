@@ -133,12 +133,11 @@ public class TeamSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         GameObject npc = Instantiate(npcPrefab, parent.transform.position, Quaternion.identity, parent) as GameObject;
     }
 
-    public void SpawnThisNPCCamp(CampObject obj, Transform pos)
+    public void SpawnThisNPCCamp(CampObject obj, Transform pos, bool interactingWithObject)
     {
         //Instantiate(npcPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         // instantiate player
         // var npcCharacter = Resources.Load("NPCPrefabs/Starters/" + prefab);
-        Debug.Log("Now in TeamSlot");
         npcPrefab = Resources.Load("NPCPrefabs/Starters/" + prefab) as GameObject;
         npcScript = npcPrefab.GetComponent<_NPC>();
         npcScript.nickname = nickname;
@@ -146,16 +145,17 @@ public class TeamSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         npcScript.prefabName = prefab;
         npcScript.hasBeenTalkedTo = hasBeenTalkedTo;
         npcScript.hasBeenAdded = true;
-        if (obj != null)
+        if (interactingWithObject)
         {
-            Instantiate(npcPrefab, new Vector2(obj.gameObject.transform.position.x, obj.gameObject.transform.position.y), Quaternion.identity);
-            npcPrefab.GetComponent<NPCController>().ChooseCampActivity(obj);
-            Debug.Log("Just called to spawn while interacting");
+            var npc = Instantiate(npcPrefab, new Vector2(obj.gameObject.transform.position.x, obj.gameObject.transform.position.y), Quaternion.identity);
+            npc.GetComponent<NPCController>().ChooseCampActivity(obj.animationType.ToString());
+            Debug.Log("Just called to spawn while interacting" + obj);
         }
-        if (pos != null)
+        else if (!interactingWithObject)
         {
-            Instantiate(npcPrefab, new Vector2(pos.position.x, pos.position.y), Quaternion.identity);
-            Debug.Log("Just called to spawn walking");
+            var npc = Instantiate(npcPrefab, new Vector2(pos.position.x, pos.position.y), Quaternion.identity);
+            npc.GetComponent<NPCController>().isInteractingWithCampObject = false;
+            Debug.Log("Just called to spawn walking" + obj);
         }
     }
 

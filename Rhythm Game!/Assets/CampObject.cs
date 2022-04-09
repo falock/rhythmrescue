@@ -18,11 +18,13 @@ public class CampObject : MonoBehaviour
 
     private void Awake()
     {
+        /*
         if (objectName == ObjectName.fire)
         {
             childPos.Add(gameObject.transform.GetChild(0));
             childPos.Add(gameObject.transform.GetChild(1));
         }
+        */
     }
     public void OnTriggerEnter2D(Collider2D other)
     {

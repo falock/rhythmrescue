@@ -20,8 +20,10 @@ public class TeamPanel : MonoBehaviour
     private List<Transform> tempPositions = new List<Transform>();
     // This is for if you have
     //[SerializeField] EquipmentType equipmentType;
+    public List<int> npcObjectNumbers = new List<int>();
+    public List<int> npcGeneralNumbers = new List<int>();
 
-private void Start()
+    private void Start()
     {
 
     }
@@ -73,21 +75,49 @@ private void Start()
             }
         }
         */
+        for (int j = 0; j < CampObjectManager.current.npcSpawnLocation.Count; j++)
+        {
+            npcObjectNumbers.Add(j);
+        }
+
+        for (int j = 0; j < CampObjectManager.current.generalSpawnPoint.Count; j++)
+        {
+            npcGeneralNumbers.Add(j);
+        }
+
+        List<int> numbersAlreadyTakenObj = new List<int>();
 
         for (int i = 0; i < teamSlots.Length; i++)
         {
             var choice = Random.Range(0, 2);
-            if (choice == 0)
+            Debug.Log("choice: " + choice + ". npcObjects is above 0: " + (npcObjectNumbers.Count > 0));
+            if (choice == 0 && npcObjectNumbers.Count > 0)
             {
-                var spawn = CampObjectManager.current.Interactable();
-                teamSlots[i].SpawnThisNPCCamp(spawn, null);
+                Debug.Log("in object");
+                var number = 0;
+                if (numbersAlreadyTakenObj.Contains(0))
+                {
+                    number = 1;
+                }
+                var spawn = CampObjectManager.current.npcSpawnLocation[number];
+                Debug.Log("object number: " + number + ". object number count: " + npcObjectNumbers.Count);
+                teamSlots[i].SpawnThisNPCCamp(spawn, null, true);
+                numbersAlreadyTakenObj.Add(number);
             }
             else
             {
-                var spawn = CampObjectManager.current.JustPosition();
-                teamSlots[i].SpawnThisNPCCamp(null, spawn);
+                Debug.Log("in general");
+                var number = Random.Range(0, npcGeneralNumbers.Count);
+                var spawn = CampObjectManager.current.generalSpawnPoint[number];
+                Debug.Log("number: " + number + "npcGeneral: " + npcGeneralNumbers.Count);
+                teamSlots[i].SpawnThisNPCCamp(null, spawn, false);
+                npcGeneralNumbers.Remove(number);
             }
         }
+        /*
+        npcObjectNumbers.Clear();
+        npcGeneralNumbers.Clear();
+        */
 
     }
 

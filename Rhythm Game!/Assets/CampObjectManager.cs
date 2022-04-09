@@ -50,9 +50,12 @@ public class CampObjectManager : MonoBehaviour
                 {
                     var child = objectParent[i].transform.GetChild(j).gameObject;
 
-                    if (child.activeInHierarchy == true && child.GetComponent<CampObject>().npcSpawnLocation)
+                    if (child.activeInHierarchy == true && child.transform.childCount > 0)
                     {
-                        npcSpawnLocation.Add(child.GetComponent<CampObject>());
+                        for (int k = 0; k < child.transform.childCount; k++)
+                        {
+                            npcSpawnLocation.Add(child.transform.GetChild(k).GetComponent<CampObject>());
+                        }
                     }
                     else
                     {
@@ -84,19 +87,15 @@ public class CampObjectManager : MonoBehaviour
         return false;
     }
 
-    public CampObject Interactable()
+    public CampObject Interactable(int number)
     {
-        Debug.Log("inside COM");
         var randomNumber = Random.Range(0, npcSpawnLocation.Count);
-        Debug.Log("number: " + randomNumber);
         return npcSpawnLocation[randomNumber];
     }
 
-    public Transform JustPosition()
+    public Transform JustPosition(int number)
     {
-        Debug.Log("inside COM");
         var randomNumber = Random.Range(0, generalSpawnPoint.Count);
-        Debug.Log("number: " + randomNumber);
         return generalSpawnPoint[randomNumber];
     }
 }

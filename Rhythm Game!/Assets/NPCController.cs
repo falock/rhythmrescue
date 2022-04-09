@@ -37,6 +37,7 @@ public class NPCController : MonoBehaviour
     public bool isActive = false;
     public const string camp = "Camp";
     public bool isInteractingWithCampObject;
+    [SerializeField] private string campObject;
 
     public Animator anim;
 
@@ -85,10 +86,11 @@ public class NPCController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(isInteractingWithCampObject)
+        if (isInteractingWithCampObject && anim != null)
         {
-            anim.SetBool("Sit", true);
+            anim.SetBool(campObject, true);
         }
+
         if (this.transform.localRotation.x != 0 || this.transform.localRotation.z != 0)
         {
             this.gameObject.transform.localRotation = Quaternion.identity;
@@ -199,14 +201,10 @@ public class NPCController : MonoBehaviour
         }
     }
 
-    public void ChooseCampActivity(CampObject obj)
+    public void ChooseCampActivity(string obj)
     {
-        if(anim == null)
-        {
-            anim = GetComponentInChildren<Animator>();
-            anim.gameObject.SetActive(true);
-        }
         isInteractingWithCampObject = true;
-        anim.SetBool("Sit", true);
+        campObject = obj;
+        Debug.Log(name + " chose camp activity" + obj);
     }
 }
