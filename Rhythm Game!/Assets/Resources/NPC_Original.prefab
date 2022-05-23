@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2347806491056201557}
   - component: {fileID: 3832544771990718819}
   - component: {fileID: 1914941261506786861}
+  - component: {fileID: 3904954897036261235}
   m_Layer: 0
   m_Name: NPC_Original
   m_TagString: Untagged
@@ -77,6 +78,8 @@ MonoBehaviour:
   moveSpeed: 0.4
   decisionTime: {x: 1, y: 2}
   isActive: 0
+  isInteractingWithCampObject: 0
+  campObject: 
   anim: {fileID: 0}
   eyes: []
   mouths: []
@@ -115,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03173828, y: 0.8000838}
+  m_Offset: {x: 0.0006073117, y: 0.11520833}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -126,8 +129,19 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5927734, y: 1.6207186}
+  m_Size: {x: 0.5758288, y: 0.25096762}
   m_EdgeRadius: 0
+--- !u!210 &3904954897036261235
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347806491056201556}
+  m_Enabled: 1
+  m_SortingLayerID: 47421343
+  m_SortingLayer: 8
+  m_SortingOrder: 0
 --- !u!1 &8088634269668683377
 GameObject:
   m_ObjectHideFlags: 0

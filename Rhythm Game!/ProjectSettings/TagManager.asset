@@ -32,10 +32,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - Obstacles
-  - Ground
+  - NPC1
+  - NPC2
+  - NPC3
+  - NPC4
   - Player
   - ObstaclesDoors
   - NoPathfinding
@@ -70,6 +70,18 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1603220759
+    locked: 0
+  - name: NPC1
+    uniqueID: 4145052733
+    locked: 0
+  - name: NPC2
+    uniqueID: 330808321
+    locked: 0
+  - name: NPC3
+    uniqueID: 4043167011
+    locked: 0
+  - name: NPC4
+    uniqueID: 549456451
     locked: 0
   - name: Characters
     uniqueID: 47421343

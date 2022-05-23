@@ -58,6 +58,16 @@ public class InventoryManager : MonoBehaviour
     public int lastPlayerLevel = 1;
     public FriendSlot currentFriend;
 
+    [Header("Settings UI")]
+    [SerializeField] private TextMeshProUGUI speedText;
+    [SerializeField] private TextMeshProUGUI difficultyText;
+    [SerializeField] private TextMeshProUGUI noteColourText;
+    [SerializeField] private TextMeshProUGUI laneDesignText;
+    [SerializeField] private Slider musicVolumeSlider;
+    [SerializeField] private Slider sfxVolumeSlider;
+    [SerializeField] private Toggle animationsToggle;
+    [SerializeField] private Toggle windowedToggle;
+
     //[Header("Store Animal Icons")]
 
     [SerializeField] private ConversationManager conversationManager;
@@ -143,6 +153,18 @@ public class InventoryManager : MonoBehaviour
         //Correct UI: RhythmLevel
         //Spawn Team Members & Player Character
         //Spawn new Enemies
+
+        else if (sceneName == "MiniGames")
+        {
+            OpenJournal.SetActive(false);
+            BackToMainMenu.SetActive(false);
+            // for now. eventually, make a specific pause screen for both the rhythm game and the mini games
+            BackToCamp.SetActive(true);
+            rhythmUIParent.SetActive(false);
+            canOpenJournal = true;
+            conversationManager.gameObject.SetActive(false);
+            SpawnPlayerMiniGames();
+        }
 
         else
         {
@@ -381,6 +403,14 @@ public class InventoryManager : MonoBehaviour
         Instantiate(playerCharacter, new Vector2(position.x, position.y), Quaternion.identity);
     }
 
+    public void SpawnPlayerMiniGames()
+    {
+        player = PlayerPrefs.GetString("playerCharacter");
+        var playerCharacter = Resources.Load("PlayerPrefabs/" + player);
+        var position = FishingManager.current.playerSpawn.transform.position;
+        Instantiate(playerCharacter, new Vector2(position.x, position.y), Quaternion.identity);
+    }
+
     public void NextPage()
     {
         Debug.Log("invntory next page");
@@ -427,6 +457,26 @@ public class InventoryManager : MonoBehaviour
     {
         notificationPanel.SetActive(true);
         notificationText.text = "Do you want to save?";
+    }
 
+    public void UpdateSettingsText()
+    {
+        var sc = Settings.current;
+        speedText.text = Settings.current.speed.ToString();
+        difficultyText.text = sc.difficultyName[sc.difficulty -1];
+        noteColourText.text = sc.noteColourName[sc.noteColour - 1];
+        laneDesignText.text = sc.laneDesignName[sc.laneDesign -1];
+        musicVolumeSlider.value = sc.musicVolume;
+        sfxVolumeSlider.value = sc.sfxVolume;
+        if (sc.animationsBool == 1) animationsToggle.isOn = true;
+        else if (sc.animationsBool == 0) animationsToggle.isOn = false;
+
+        if (sc.windowedBool == 0) windowedToggle.isOn = false;
+        else if (sc.windowedBool == 1) windowedToggle.isOn = true;
+    }
+
+    public void GoToMiniGames()
+    {
+        SceneManager.LoadScene("MiniGames");
     }
 }

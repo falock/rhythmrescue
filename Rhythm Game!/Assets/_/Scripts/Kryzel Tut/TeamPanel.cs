@@ -23,6 +23,9 @@ public class TeamPanel : MonoBehaviour
     public List<int> npcObjectNumbers = new List<int>();
     public List<int> npcGeneralNumbers = new List<int>();
 
+    private List<int> numbersAlreadyTakenObj = new List<int>();
+    private List<int> numbersAlreadyTakenGen = new List<int>();
+
     private void Start()
     {
 
@@ -66,59 +69,43 @@ public class TeamPanel : MonoBehaviour
 
     public void SpawnTeamMembersCamp()
     {
-        /*
-        for (int j = 0; j < CampObjectManager.current.npcSpawnLocation.Count; j++)
-        {
-            for (int k = 0; k < CampObjectManager.current.npcSpawnLocation[j].transform.childCount; k++)
-            {
-                pos.Add(CampObjectManager.current.npcSpawnLocation[j].transform.GetChild(k).transform);
-            }
-        }
-        */
-        for (int j = 0; j < CampObjectManager.current.npcSpawnLocation.Count; j++)
-        {
-            npcObjectNumbers.Add(j);
-        }
-
-        for (int j = 0; j < CampObjectManager.current.generalSpawnPoint.Count; j++)
-        {
-            npcGeneralNumbers.Add(j);
-        }
-
-        List<int> numbersAlreadyTakenObj = new List<int>();
-
         for (int i = 0; i < teamSlots.Length; i++)
         {
             var choice = Random.Range(0, 2);
-            Debug.Log("choice: " + choice + ". npcObjects is above 0: " + (npcObjectNumbers.Count > 0));
-            if (choice == 0 && npcObjectNumbers.Count > 0)
+            var obj = Random.Range(0, 2);
+            Debug.Log("choice: " + choice + ". obj: " + obj + "contains?: " + numbersAlreadyTakenObj.Contains(obj));
+
+            if (choice == 0 && !numbersAlreadyTakenObj.Contains(obj))
             {
-                Debug.Log("in object");
-                var number = 0;
-                if (numbersAlreadyTakenObj.Contains(0))
-                {
-                    number = 1;
-                }
-                var spawn = CampObjectManager.current.npcSpawnLocation[number];
-                Debug.Log("object number: " + number + ". object number count: " + npcObjectNumbers.Count);
+                Debug.Log("into spawn");
+
+                var spawn = CampObjectManager.current.npcSpawnLocation[obj];
                 teamSlots[i].SpawnThisNPCCamp(spawn, null, true);
-                numbersAlreadyTakenObj.Add(number);
+                numbersAlreadyTakenObj.Add(obj);
             }
             else
             {
                 Debug.Log("in general");
-                var number = Random.Range(0, npcGeneralNumbers.Count);
-                var spawn = CampObjectManager.current.generalSpawnPoint[number];
-                Debug.Log("number: " + number + "npcGeneral: " + npcGeneralNumbers.Count);
+                var general = GetGenNumber();
+                var spawn = CampObjectManager.current.generalSpawnPoint[general];
                 teamSlots[i].SpawnThisNPCCamp(null, spawn, false);
-                npcGeneralNumbers.Remove(number);
+                Debug.Log("general: " + general);
+                numbersAlreadyTakenGen.Add(general);
             }
         }
-        /*
-        npcObjectNumbers.Clear();
-        npcGeneralNumbers.Clear();
-        */
 
+        numbersAlreadyTakenObj.Clear();
+        numbersAlreadyTakenGen.Clear();
+    }
+
+    private int GetGenNumber()
+    {
+        int val = Random.Range(0, CampObjectManager.current.generalSpawnPoint.Count);
+        while (numbersAlreadyTakenGen.Contains(val))
+        {
+            val = Random.Range(0, CampObjectManager.current.generalSpawnPoint.Count);
+        }
+        return val;
     }
 
     public void SpawnTeamMembersRhythm()

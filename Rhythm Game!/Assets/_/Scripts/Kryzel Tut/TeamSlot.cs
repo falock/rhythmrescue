@@ -139,6 +139,7 @@ public class TeamSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         // instantiate player
         // var npcCharacter = Resources.Load("NPCPrefabs/Starters/" + prefab);
         npcPrefab = Resources.Load("NPCPrefabs/Starters/" + prefab) as GameObject;
+        Debug.Log("in teamslot SPAWNTHISNPC");
         npcScript = npcPrefab.GetComponent<_NPC>();
         npcScript.nickname = nickname;
         npcScript.personality = personality;
@@ -151,7 +152,7 @@ public class TeamSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             npc.GetComponent<NPCController>().ChooseCampActivity(obj.animationType.ToString());
             Debug.Log("Just called to spawn while interacting" + obj);
         }
-        else if (!interactingWithObject)
+        else
         {
             var npc = Instantiate(npcPrefab, new Vector2(pos.position.x, pos.position.y), Quaternion.identity);
             npc.GetComponent<NPCController>().isInteractingWithCampObject = false;
