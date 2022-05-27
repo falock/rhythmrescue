@@ -12,9 +12,11 @@ public class Note : MonoBehaviour
 	public FishingConductor conductor;
 	public bool canBePressed;
 	private float nextX;
-	public AudioClip[] sounds;
+	public AudioSource audioSource;
+	public bool hasBeenPressed;
+	public bool failed;
 
-	public void Initialize(FishingConductor conductor, float startX, float endX, float removeLineX, float posY, float beat)
+	public void Initialize(FishingConductor conductor, float startX, float endX, float removeLineX, float posY, float beat, AudioClip audioClip)
 	{
 		this.conductor = conductor;
 		this.startX = startX;
@@ -26,6 +28,10 @@ public class Note : MonoBehaviour
 		transform.position = new Vector2(startX, posY);
 
 		secPerBeat = conductor.secPerBeat;
+		audioSource = this.gameObject.GetComponent<AudioSource>();
+
+		audioSource.clip = audioClip;
+
 	}
 
 	void Update()
@@ -44,10 +50,11 @@ public class Note : MonoBehaviour
 
 		if (Input.anyKeyDown)
 		{
-			if (canBePressed)
+			if (canBePressed && !hasBeenPressed)
 			{
 				// fish animates being caught
-				Debug.Log("caught the fish!");
+				hasBeenPressed = true;
+				audioSource.Play();
 				// score
 			}
 		}
@@ -67,6 +74,10 @@ public class Note : MonoBehaviour
 		if (other.tag == "Activator" && gameObject.activeSelf)
 		{
 			canBePressed = false;
+			if(!hasBeenPressed)
+            {
+				failed = true;
+            }
 		}
 	}
 }

@@ -13,14 +13,17 @@ public class Fish : MonoBehaviour
 	public bool canBePressed;
 	private float nextX;
 	public AudioClip[] sounds;
+	private List<GameObject> musicNoteList = new List<GameObject>();
+	private bool pause;
 
-	public void Initialize(FishingConductor conductor, float startX, float endX, float removeLineX, float posY, float beat)
+	public void Initialize(FishingConductor conductor, float startX, float endX, float removeLineX, float posY, float beat, List<GameObject> notes)
 	{
 		this.conductor = conductor;
 		this.startX = startX;
 		this.endX = endX;
 		this.beat = beat;
 		this.removeLineX = -removeLineX;
+		this.musicNoteList = notes;
 
 		// Set to initial position.
 		transform.position = new Vector2(startX, posY);
@@ -33,6 +36,23 @@ public class Fish : MonoBehaviour
 		// We update the position of the note according to the position of the song.
 		// (Think of this as "resetting" instead of "updating" the position of the note each frame according to the position of the song.)
 		// See this image: http://shinerightstudio.com/posts/music-syncing-in-rhythm-games/pic3.png (Note that the direction is reversed.)
+
+		if (transform.position.x == endX && !CheckNotes())
+		{
+			pause = true;
+		}
+        else
+        {
+			pause = false;
+        }
+
+		if(CheckIfSucceeded())
+        {
+			FishingManager.current.CatchFish(this);
+			Destroy(gameObject);
+        }
+
+		if (pause) return;
 		transform.position = new Vector2(startX + (endX - startX) * (1f - (beat - conductor.songPosition / conductor.secPerBeat) / conductor.BeatsShownOnScreen), transform.position.y);
 		nextX = startX + (endX - startX) * (1f - (beat - conductor.songPosition / conductor.secPerBeat) / conductor.BeatsShownOnScreen);
 
@@ -43,40 +63,36 @@ public class Fish : MonoBehaviour
 			Destroy(gameObject);
 		}
 
-		CheckTapNote();
-
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.tag == "Activator")
+	private bool CheckNotes()
+    {
+		for (int i = 0; i < musicNoteList.Count; ++i)
 		{
-			canBePressed = true;
-		}
-	}
-
-	void OnTriggerExit2D(Collider2D other)
-	{
-		if (other.tag == "Activator" && gameObject.activeSelf)
-		{
-			canBePressed = false;
-		}
-	}
-
-	void CheckTapNote()
-	{
-		//(indexOfNextNote < track.Length && track[indexOfNextNote] < beatToShow)
-
-		//Debug.Log("tap note!");
-		if (Input.anyKeyDown)
-		{
-			if (canBePressed)
+			if (musicNoteList[i].GetComponent<Note>().failed == false)
 			{
-				// fish animates being caught
-				Debug.Log("caught the fish!");
-				// score
+				// returning false means the fish stays paused
+				return false;
 			}
 		}
+
+		// fish continues moving
+		return true;
+	}
+
+	private bool CheckIfSucceeded()
+    {
+		for (int i = 0; i < musicNoteList.Count; ++i)
+		{
+			if (musicNoteList[i].GetComponent<Note>().hasBeenPressed == false)
+			{
+				// returning false means the fish stays paused
+				return false;
+			}
+		}
+
+		// fish continues moving
+		return true;
 	}
 }
 

@@ -16,7 +16,17 @@ public class LevelSelectManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        current = this;
+        //Check if instance already exists
+        if (current == null)
+        {
+            //if not, set instance to this
+            current = this;
+        }
+        //If instance already exists and it's not this:
+        else if (current != this)
+        {
+            Destroy(gameObject);
+        }
         for (int i = 0; i < levels.Count; i++)
         {
             levelFloat.Add(levels[i].transform.position);

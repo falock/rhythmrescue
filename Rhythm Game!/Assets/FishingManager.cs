@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class FishingManager : MonoBehaviour
 {
@@ -8,6 +10,15 @@ public class FishingManager : MonoBehaviour
     public GameObject fishingRod;
     public GameObject playerSpawn;
     public GameObject playerReference;
+    public FishSlot[] fishStoredInUI;
+
+    [Header("DisplayRecentlyCaughtFish")]
+    public GameObject caughtFishDisplay;
+    public TextMeshProUGUI fishName;
+    public TextMeshProUGUI fishSize;
+    public GameObject newFish;
+    public GameObject newSizeRecord;
+    public Image fishImage;
 
     private void Awake()
     {
@@ -22,26 +33,31 @@ public class FishingManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-//        playerReference = FindObjectOfType<PlayerController>().gameObject;
-        // this script will handle any interaction by the player, also the player movemnt script will be disabled
-        // tutorial - either choose to do practice run OR a visual tutorial box comes up to teach you
-        // when you click OK, there is a countdown on beat with the song that starts playing
-        // fish are spawned and move across the screen like notes. Each fish makes a sound as they pass through a boxcollider
-        // the player then has to hit the button in the same pattern, which also produces a sound
+
+        for (int i = 0; i < fishStoredInUI.Length; i++)
+        {
+            fishStoredInUI[i].number = i;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CatchFish(Fish fish)
     {
-        
+        for (int i = 0; i < fishStoredInUI.Length; i++)
+        {
+            if (fishStoredInUI[i].name == fish.name)
+            {
+                fishStoredInUI[i].CatchFish();
+            }
+        }
     }
 
-    public void PlaySound()
+    public void DisplayCaughtFish(float sizeCaught, bool firstTime, bool sizeRecord, string name, Image image)
     {
-
+        caughtFishDisplay.SetActive(true);
+        fishName.text = name;
+        fishSize.text = sizeCaught.ToString();
+        newFish.SetActive(firstTime);
+        newSizeRecord.SetActive(sizeRecord);
+        fishImage = image;
     }
 }
