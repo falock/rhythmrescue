@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+using Random = UnityEngine.Random;
 
 public class FishSlot : MonoBehaviour
 {
-    [Header("Type Values Inspector")]
+    [Header("Assign Values in Inspector")]
     public string fishName;
     public float minSize;
     public float maxSize;
@@ -22,13 +24,29 @@ public class FishSlot : MonoBehaviour
     public float biggestCatch;
     public int number;
 
+    public int fishCategory;
+
     private void Awake()
     {
         // needs to retrieve any saved data
         // needs to display values
+        /*
         if(PlayerPrefs.GetInt("caught" + number) == 1)
         {
             caught = true;
+            fishNameText.text = fishName;
+            sizeRangeText.text = minSize.ToString() + "-" + maxSize.ToString() + "cm";
+            biggestCatchText.text = PlayerPrefs.GetFloat("biggestCatch" + number).ToString() + "cm";
+            factText.text = fact;
+        }
+        */
+    }
+
+    private void Update()
+    {
+        if (this.gameObject.activeInHierarchy)
+        {
+            Debug.Log("updatee update");
             fishNameText.text = fishName;
             sizeRangeText.text = minSize.ToString() + "-" + maxSize.ToString() + "cm";
             biggestCatchText.text = PlayerPrefs.GetFloat("biggestCatch" + number).ToString() + "cm";
@@ -40,22 +58,18 @@ public class FishSlot : MonoBehaviour
     {
         bool alreadyBeenCaught = false;
         bool newRecord = false;
+        caught = true;
+        alreadyBeenCaught = true;
 
-        if(PlayerPrefs.GetInt("caught" + number) == 0)
+        var sizeCaught = Math.Round(Random.Range(minSize, maxSize), 2);
+        var sizeCaughtFloat = (float)sizeCaught;
+        if (sizeCaught > biggestCatch)
         {
-            PlayerPrefs.SetInt("caught" + number, 1);
-        }
-        else
-        {
-            alreadyBeenCaught = true;
-        }
-        var sizeCaught = Random.Range(minSize, maxSize);
-        if(sizeCaught > biggestCatch)
-        {
-            biggestCatch = sizeCaught;
+            biggestCatch = sizeCaughtFloat;
             newRecord = true;
         }
         PlayerPrefs.SetFloat("biggestCatch" + number, biggestCatch);
-        FishingManager.current.DisplayCaughtFish(sizeCaught, alreadyBeenCaught, newRecord, fishName, fishImage);
+        FishingManager.current.DisplayCaughtFish(sizeCaughtFloat, alreadyBeenCaught, newRecord, fishName, fishImage.sprite);
+        Debug.Log("caught" + PlayerPrefs.GetInt("caught" + number));
     }
 }

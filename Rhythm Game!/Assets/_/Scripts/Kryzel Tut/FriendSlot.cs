@@ -140,8 +140,7 @@ public class FriendSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void DeleteFriend()
     {
-        Destroy(this.gameObject);
-        InventoryManager.current.DeleteFriend();
+        InventoryManager.current.DeleteFriend(this);
     }
 
     public void AddFriendToTeam()

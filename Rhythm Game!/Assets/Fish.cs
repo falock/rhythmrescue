@@ -48,8 +48,9 @@ public class Fish : MonoBehaviour
 
 		if(CheckIfSucceeded())
         {
+			Debug.Log("checking");
 			FishingManager.current.CatchFish(this);
-			Destroy(gameObject);
+			Destroy(this.gameObject);
         }
 
 		if (pause) return;
@@ -59,7 +60,6 @@ public class Fish : MonoBehaviour
 		// Remove itself when out of the screen (remove line).
 		if (transform.position.x < removeLineX)
 		{
-			Debug.Log(true + "transform: " + transform.position.x + ". removeLineX: " + removeLineX);
 			Destroy(gameObject);
 		}
 

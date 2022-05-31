@@ -149,7 +149,6 @@ public class PlayerController : MonoBehaviour
         {
             if (InventoryManager.current.canOpenJournal && !journalIsOpen)
             {
-                Debug.Log("pressing escape");
                 InventoryManager.current.OpenJournal.SetActive(true);
                 journalIsOpen = true;
                 InventoryManager.current.GetFriends();

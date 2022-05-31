@@ -54,6 +54,7 @@ public class Note : MonoBehaviour
 			{
 				// fish animates being caught
 				hasBeenPressed = true;
+				Debug.Log("pressed");
 				audioSource.Play();
 				// score
 			}

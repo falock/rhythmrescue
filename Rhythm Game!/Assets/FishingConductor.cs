@@ -10,7 +10,8 @@ public class FishingConductor : MonoBehaviour
 	[Header("Note Information")]
 
 	[SerializeField] public GameObject notePrefab;
-	[SerializeField] public GameObject fishPrefab;
+	[SerializeField] public GameObject smallFishPrefab;
+	[SerializeField] public GameObject bigFishPrefab;
 	// [SerializeField] public GameObject holdNotePrefab;
 
 	// The position Y of music notes.
@@ -228,7 +229,6 @@ public class FishingConductor : MonoBehaviour
 					Debug.Log("i: " + i);
 					notesOnScreen.Enqueue(note);
 					musicNoteList.Add(note.gameObject);
-					Debug.Log("track.Length: " + track.Length + ". audioClips.Length: " + audioClipsList.Count);
 
 
 					//StartCoroutine(WaitForSound());
@@ -238,8 +238,18 @@ public class FishingConductor : MonoBehaviour
 					indexOfNextNote++;
 					g++;
 				}
-				var fish = Instantiate(fishPrefab, Vector2.zero, Quaternion.identity).GetComponent<Fish>();
-				fish.Initialize(this, startLineX, finishLineX, removeLineX, lanePosY, track[0], musicNoteList);
+				if (track.Length == 2)
+                {
+					var fish = Instantiate(smallFishPrefab, Vector2.zero, Quaternion.identity).GetComponent<Fish>();
+					fish.Initialize(this, startLineX, finishLineX, removeLineX, lanePosY, track[0], musicNoteList);
+					fish.name = FishingManager.current.GetName(0);
+				}
+                else if (track.Length > 2)
+                {
+					var fish = Instantiate(bigFishPrefab, Vector2.zero, Quaternion.identity).GetComponent<Fish>();
+					fish.Initialize(this, startLineX, finishLineX, removeLineX, lanePosY, track[0], musicNoteList);
+					fish.name = FishingManager.current.GetName(1);
+				}
 			}
 		}
 

@@ -69,17 +69,16 @@ public class FriendList : MonoBehaviour
 
     public void RefreshUI()
     {
-        Debug.Log("friendparent childcount: " + friendParent.childCount);
-
         if (friendParent != null)
         {
             friendSlots.Clear();
-            for (int i = 1; i < friendParent.childCount; i++)
+            for (int i = 0; i < friendParent.childCount; i++)
             {
-                friendSlots.Add(friendParent.GetChild(i - 1).GetComponent<FriendSlot>());
-
+                friendSlots.Add(friendParent.GetChild(i).GetComponent<FriendSlot>());
             }
         }
+        Debug.Log("friendparent childcount: " + friendParent.childCount);
+        Debug.Log("done refresh UI in friendlist");
     }
 
     public bool AddNPC(_NPC npc)
@@ -146,9 +145,8 @@ public class FriendList : MonoBehaviour
 
     public void RefreshGrid()
     {
-        Debug.Log("refresh UI");
+        LoadInFriends();
         moveGrid.Refresh();
         RefreshUI();
-        Debug.Log("out of refresh UI");
     }
 }

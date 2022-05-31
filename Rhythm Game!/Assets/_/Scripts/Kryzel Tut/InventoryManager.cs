@@ -210,9 +210,10 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void DeleteFriend()
+    public void DeleteFriend(FriendSlot friend)
     {
-        friendList.RefreshUI();
+        //DestroyImmediate(friend.gameObject);
+        Debug.Log("friend: " + friend.gameObject);
         friendList.RefreshGrid();
     }
 

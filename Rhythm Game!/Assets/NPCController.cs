@@ -86,9 +86,12 @@ public class NPCController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (isInteractingWithCampObject && anim != null)
+        if (isInteractingWithCampObject)
         {
-            anim.SetBool(campObject, true);
+            if(anim != null)
+            {
+                anim.SetBool(campObject, true);
+            }
         }
 
         if (this.transform.localRotation.x != 0 || this.transform.localRotation.z != 0)
