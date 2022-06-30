@@ -116,55 +116,104 @@ public class MoveGrid : MonoBehaviour
         }
     }
 
-    public void Refresh()
+    public void Update()
     {
-        trackingInt = 0;
-        cards.Clear();
-
-        for (int i = 1; i <= this.transform.childCount; i++)
+        if (this.gameObject.activeInHierarchy)
         {
-            Debug.Log("childcount i = " + i);
-            /*
-            if (!cards.Contains(this.transform.GetChild(i).gameObject))
+            trackingInt = 0;
+            cards.Clear();
+
+            for (int i = 1; i <= this.transform.childCount; i++)
             {
-                cards.Add(this.transform.GetChild(i).gameObject);
+                Debug.Log("childcount i = " + i);
+                /*
+                if (!cards.Contains(this.transform.GetChild(i).gameObject))
+                {
+                    cards.Add(this.transform.GetChild(i).gameObject);
+                }
+                */
+                cards.Add(this.transform.GetChild(i -1).gameObject);
             }
-            */
-            cards.Add(this.transform.GetChild(i - 1).gameObject);
-        }
 
-        for (int i = 0; i < cards.Count; i++)
-        {
-            if (cards[i] != null)
+            for (int i = 0; i < cards.Count; i++)
             {
-                cards[i].transform.position = positions[6].transform.position;
+                if (cards[i] != null)
+                {
+                    cards[i].transform.position = positions[6].transform.position;
+                }
             }
-        }
 
-        for (int i = 0; i < cards.Count; i++)
-        {
-            if (cards[i] != null && i <= 5)
+            for (int i = 0; i < cards.Count; i++)
             {
-                cards[i].transform.position = positions[i + 1].transform.position;
+                if (cards[i] != null && i <= 5)
+                {
+                    cards[i].transform.position = positions[i + 1].transform.position;
+                }
+                else if (cards[i] != null && i > 5)
+                {
+                    cards[i].transform.position = positions[6].transform.position;
+                }
             }
-            else if (cards[i] != null && i > 5)
+
+            leftButton.GetComponent<Button>().enabled = false;
+            leftButton.GetComponent<Image>().enabled = false;
+
+            if (5 > cards.Count)
             {
-                cards[i].transform.position = positions[6].transform.position;
+                rightButton.GetComponent<Button>().enabled = false;
+                rightButton.GetComponent<Image>().enabled = false;
             }
-        }
+            else if (5 < cards.Count)
+            {
+                rightButton.GetComponent<Button>().enabled = true;
+                rightButton.GetComponent<Image>().enabled = true;
+            }
 
-        leftButton.GetComponent<Button>().enabled = false;
-        leftButton.GetComponent<Image>().enabled = false;
+            trackingInt = 0;
+            cards.Clear();
 
-        if (5 > cards.Count)
-        {
-            rightButton.GetComponent<Button>().enabled = false;
-            rightButton.GetComponent<Image>().enabled = false;
-        }
-        else if (5 < cards.Count)
-        {
-            rightButton.GetComponent<Button>().enabled = true;
-            rightButton.GetComponent<Image>().enabled = true;
+            for (int i = 1; i <= this.transform.childCount; i++)
+            {
+                /*
+                if (!cards.Contains(this.transform.GetChild(i).gameObject))
+                {
+                    cards.Add(this.transform.GetChild(i).gameObject);
+                }
+                */
+                cards.Add(this.transform.GetChild(i - 1).gameObject);
+            }
+            for (int i = 0; i < cards.Count; i++)
+            {
+                if (cards[i] != null)
+                {
+                    cards[i].transform.position = positions[6].transform.position;
+                }
+            }
+            for (int i = 0; i < cards.Count; i++)
+            {
+                if (cards[i] != null && i <= 5)
+                {
+                    cards[i].transform.position = positions[i + 1].transform.position;
+                }
+                else if (cards[i] != null && i > 5)
+                {
+                    cards[i].transform.position = positions[6].transform.position;
+                }
+            }
+
+            leftButton.GetComponent<Button>().enabled = false;
+            leftButton.GetComponent<Image>().enabled = false;
+
+            if (5 > cards.Count)
+            {
+                rightButton.GetComponent<Button>().enabled = false;
+                rightButton.GetComponent<Image>().enabled = false;
+            }
+            else if (5 < cards.Count)
+            {
+                rightButton.GetComponent<Button>().enabled = true;
+                rightButton.GetComponent<Image>().enabled = true;
+            }
         }
     }
 

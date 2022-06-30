@@ -81,6 +81,10 @@ public class NPCController : MonoBehaviour
             dialogueTriggerBox.SetActive(true);
             //walkArea =
         }
+        else
+        {
+            isInteractingWithCampObject = false;
+        }
     }
 
     // Update is called once per frame
@@ -206,6 +210,7 @@ public class NPCController : MonoBehaviour
 
     public void ChooseCampActivity(string obj)
     {
+        if (!isActive) return;
         isInteractingWithCampObject = true;
         campObject = obj;
         Debug.Log(name + " chose camp activity" + obj);
