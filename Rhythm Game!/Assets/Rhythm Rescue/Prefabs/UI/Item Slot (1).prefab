@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 3372338269821477816}
   - component: {fileID: 3372338269821477814}
   - component: {fileID: 3372338269821477817}
-  - component: {fileID: 7614360378926453343}
+  - component: {fileID: 4512676739268568322}
   m_Layer: 5
   m_Name: Item Slot (1)
   m_TagString: Untagged
@@ -774,7 +774,7 @@ MonoBehaviour:
   hasNPC: 1
   xButton: {fileID: 9080130103721586395}
   plusButton: {fileID: 592515789206144306}
---- !u!114 &7614360378926453343
+--- !u!114 &4512676739268568322
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3372338269821477819}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b6f0275cebe14ed182a157a20f23f8a, type: 3}
+  m_Script: {fileID: 11500000, guid: fbcb15f38965542f4b111d0b80f3a1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4940833089739386003

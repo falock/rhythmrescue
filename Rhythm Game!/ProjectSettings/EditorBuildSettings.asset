@@ -90,24 +90,24 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/_/Scenes/Start.unity
+    path: Assets/Rhythm Rescue/Scenes/Start.unity
     guid: 861bbf64d56af405a8971bd6ab4bde11
   - enabled: 1
-    path: Assets/_/Scenes/MainScreen.unity
+    path: Assets/Rhythm Rescue/Scenes/MainScreen.unity
     guid: 8728e408bdba34f189e713698e813872
   - enabled: 1
-    path: Assets/_/Scenes/Camp.unity
+    path: Assets/Rhythm Rescue/Scenes/Camp.unity
     guid: 3b115660092574561949df294ca77031
   - enabled: 1
-    path: Assets/_/Scenes/Level_1.unity
+    path: Assets/Rhythm Rescue/Scenes/Level_1.unity
     guid: 8bd5b7f7deec948b38778a12075c7291
   - enabled: 0
-    path: Assets/_/Scenes/Test Scene 1.unity
+    path: Assets/Rhythm Rescue/Scenes/Test Scene 1.unity
     guid: bb1db058dfc91427a835a89c8d9413cb
   - enabled: 0
-    path: Assets/_/Scenes/Test Scene 2.unity
+    path: Assets/Rhythm Rescue/Scenes/Test Scene 2.unity
     guid: b780abba5b5c34505a2190e1528123c8
   - enabled: 1
-    path: Assets/_/Scenes/MiniGames.unity
+    path: Assets/Rhythm Rescue/Scenes/MiniGames.unity
     guid: e5290139991be49fa958081d9b65ec3b
   m_configObjects: {}

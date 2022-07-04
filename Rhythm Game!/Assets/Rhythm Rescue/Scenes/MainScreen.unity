@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 871948195}
   - component: {fileID: 871948194}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Spawn NPCs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -777,7 +777,7 @@ MonoBehaviour:
   npcPrefabList:
   - {fileID: 2608565354878180917, guid: 8e3994a2fc5644f07bba30c462263a8f, type: 3}
   - {fileID: 1960871671464975135, guid: 70b3da85b5fdf43bd98b9cf860725086, type: 3}
-  prefabName: 
+  numberOfEnemiesToSpawn: 0
   recruitTriggerBox: {fileID: 0}
 --- !u!4 &871948195
 Transform:
