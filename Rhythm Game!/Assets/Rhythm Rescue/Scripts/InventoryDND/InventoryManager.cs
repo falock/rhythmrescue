@@ -65,7 +65,8 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private Toggle animationsToggle;
     [SerializeField] private Toggle windowedToggle;
 
-    private ConversationManager conversationManager;
+    [Header("ConversationManager")]
+    public GameObject conversationManager;
 
     private string nickname;
     private _NPC currentNPC;
@@ -104,7 +105,7 @@ public class InventoryManager : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         // Retrieve the name of this scene.
         sceneName = currentScene.name;
-
+        Debug.Log("scenename = " + sceneName);
         notificationPanel.SetActive(false);
 
         // how the UI should be for the Camp Scene
@@ -160,7 +161,7 @@ public class InventoryManager : MonoBehaviour
         else
         {
             Debug.Log("Scene is ELSE");
-            conversationManager.gameObject.SetActive(false);
+            //conversationManager.gameObject.SetActive(false);
             OpenJournal.SetActive(false);
             BackToMainMenu.SetActive(false);
             BackToCamp.SetActive(false);
@@ -247,6 +248,9 @@ public class InventoryManager : MonoBehaviour
             teamPanel.teamSlots[j].SelectingATeamMember(false);
             teamPanel.teamSlots[j].selectButton.enabled = false;
         }
+
+        AchievementManager.current.IncreaseAchievement("NewFriendToTeam", 1);
+        Debug.Log("after add new rfirned to team");
     }
 
     /*
@@ -331,6 +335,12 @@ public class InventoryManager : MonoBehaviour
         npc.name = nickname;
         npc.nickname = nickname;
         friendList.AddNPC(npc);
+        // track achievement
+        Debug.Log("BEFORE increase achievement in inventory finishinit:");
+        AchievementManager.current.IncreaseAchievement("5Friends", 1);
+        AchievementManager.current.IncreaseAchievement("10Friends", 1);
+        Debug.Log("AFTER increase achievement in inventory finishinit: ");
+        //AchievementManager.current.IncreaseAchievement(5Friends, 1);
         //friendList.npcIDs.Add(npc.npcID);
         //hasAddedFriend = true;
     }
@@ -409,7 +419,7 @@ public class InventoryManager : MonoBehaviour
     public void StartConversation(_NPC npc)
     {
         Debug.Log("inventory dialogue");
-        conversationManager.SelectConversation(npc);
+        conversationManager.GetComponent<ConversationManager>().SelectConversation(npc);
     }
 
     public void UpdateGrid()
@@ -439,8 +449,11 @@ public class InventoryManager : MonoBehaviour
         else if (sc.windowedBool == 1) windowedToggle.isOn = true;
     }
 
+    // Removed feature. Minigames will be added later
+    /*
     public void GoToMiniGames()
     {
         SceneManager.LoadScene("MiniGames");
     }
+    */
 }

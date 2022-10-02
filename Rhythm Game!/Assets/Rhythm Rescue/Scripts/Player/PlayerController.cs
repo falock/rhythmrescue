@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     float horizontal;
     float vertical;
+    float moveLimiter = 0.7f;
+
 
     public float runSpeed = 10.0f;
 
@@ -172,6 +174,12 @@ public class PlayerController : MonoBehaviour
         if (useVertical)
         {
             body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+            if (horizontal != 0 && vertical != 0)
+            {
+                // limit movement speed diagonally, so you move at 70% speed
+                horizontal *= moveLimiter;
+                vertical *= moveLimiter;
+            }
         }
 
     }

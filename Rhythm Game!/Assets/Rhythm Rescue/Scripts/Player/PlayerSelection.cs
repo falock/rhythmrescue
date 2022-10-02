@@ -53,6 +53,11 @@ public class PlayerSelection : MonoBehaviour
     [Header("New Way")]
     [SerializeField] private GameObject[] gamePositions;
 
+    //bools to track what page the player is on
+    private bool playerPageIsOpen;
+    private bool teamPageIsOpen;
+
+    // ready the scene for player selection
     private void Start()
     {
         confirmSelection.SetActive(false);
@@ -63,11 +68,15 @@ public class PlayerSelection : MonoBehaviour
         teamInt = 0;
 
         playerParent.transform.GetChild(playerInt).position = playerSelection.transform.Find("Image").position;
+        playerPageIsOpen = true;
     }
 
+    
     public void Update()
     {
-        if(chooseTeamPage.activeInHierarchy)
+        // check if the team confirm button should be active or not (is this still needed?)
+        /*
+        if(teamPageIsOpen)
         {
             if(teamNickname.Count < 4)
             {
@@ -78,7 +87,55 @@ public class PlayerSelection : MonoBehaviour
                 teamConfirmButton.SetActive(true);
             }
         }
+        */
+
+        // if the player presses return, determine what page their on and call the function for that page
+        // this is so the player selection process goes quicker, no need to move mouse to each button
+        // may be removed for the final game - TBD
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            if(playerPageIsOpen)
+            {
+                ChoosePlayer();
+            }
+            else if (teamPageIsOpen)
+            {
+                ChooseTeam();
+            }
+            else if (!playerPageIsOpen && !teamPageIsOpen)
+            {
+                StartGame();
+            }
+        }
+
+        // keyboard shortcut - if player presses left arrow it moves character choice left
+        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (playerPageIsOpen)
+            {
+                PlayerLeft();
+            }
+            else if (teamPageIsOpen)
+            {
+                TeamLeft();
+            }
+        }
+
+        // keyboard shortcut - if player presses right arrow it moves character choice right
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (playerPageIsOpen)
+            {
+                PlayerRight();
+            }
+            else if (teamPageIsOpen)
+            {
+                TeamRight();
+            }
+        }
     }
+
+    // save all team members, add these to the inventory, and start the game
     public void StartGame()
     {
         for (int i = 0; i < teamNickname.Count; i++)
@@ -93,8 +150,10 @@ public class PlayerSelection : MonoBehaviour
         SceneManager.LoadScene("MainScreen");
     }
 
+    // called when player chooses a character. This is to ask to confirm their choice or remind them to enter a nickname
     public void ChoosePlayer()
     {
+        // if the nickname text field isn't empty, ask the player to confirm choice
         if (!String.IsNullOrEmpty(inputField.text))
         {
             playerName = inputField.text;
@@ -103,6 +162,7 @@ public class PlayerSelection : MonoBehaviour
             child = confirmSelection.transform.GetChild(0).gameObject;
             child.GetComponent<TextMeshProUGUI>().text = "You're a " + playerSpecies + " called " + "\"" + playerName + "\"?";
         }
+        // if the nickname text field is empty, ask the player to enter a nickname
         else if (String.IsNullOrEmpty(inputField.text))
         {
             nicknameNullWarning.SetActive(true);
@@ -110,31 +170,40 @@ public class PlayerSelection : MonoBehaviour
         }
     }
 
+    // save player choice and move onto team selection
     public void ConfirmPlayer()
     {
+        // save player character choice and nickname
         PlayerPrefs.SetString("playerCharacter", playerParent.transform.GetChild(playerInt).name);
         PlayerPrefs.SetString("playerNickname", inputField.text);
-        // back
+        // move player page away from screen
         choosePlayerPage.GetComponent<Animator>().Play("PlayerPage");
         chooseTeamPage.SetActive(true);
-        // forward
+        // move team page into screen
         chooseTeamPage.GetComponent<Animator>().Play("TeamPageLeft");
         confirmSelection.SetActive(false);
-        //choosePlayerPage.SetActive(false);
         teamParent.transform.GetChild(teamInt).position = teamSelection.transform.Find("Image").position;
+        // keep track of what page the player is on
+        playerPageIsOpen = false;
+        teamPageIsOpen = true;
     }
 
+    // go back to the player selection page from the team selection page
     public void BackToPlayerPage()
     {
         chooseTeamPage.GetComponent<Animator>().Play("TeamPageRight");
         choosePlayerPage.GetComponent<Animator>().Play("PlayerPageBack");
-
+        playerPageIsOpen = true;
+        teamPageIsOpen = false;
     }
 
+    // adds a team member
     public void ChooseTeam()
     {
+        // check the player hasn't already chosen 4 team members
         if (teamNickname.Count < 4)
         {
+            // if the team member's name text field isn't empty, add their details to team member lists
             if (!String.IsNullOrEmpty(teamInputField.text))
             {
                 teamNickname.Add(teamInputField.text);
@@ -145,6 +214,7 @@ public class PlayerSelection : MonoBehaviour
                 teamSpecies.Add(teamParent.transform.GetChild(teamInt).GetComponentInChildren<TextMeshProUGUI>().text);
                 iconInt.Add(teamInt);
 
+                // add the new team member's card to the screen
                 for (int i = 0; i < teamIcons.Length; i++)
                 {
                     if (teamIcons[i].activeInHierarchy == false)
@@ -158,10 +228,12 @@ public class PlayerSelection : MonoBehaviour
                         break;
                     }
                 }
-               
+
+                // reset the team member selection
                 teamDropDown.value = 0;
                 teamInputField.text = "";
             }
+            // if the team member's name text field is empty, remind the player they need to enter a nickname
             else
             {
                 nicknameNullWarning.SetActive(true);
@@ -192,6 +264,7 @@ public class PlayerSelection : MonoBehaviour
                             "\nSpecies: " + playerSpecies;
             player.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = playerName;
             player.transform.GetChild(1).GetComponent<Image>().sprite = playerParent.transform.Find(PlayerPrefs.GetString("playerCharacter")).GetComponent<Image>().sprite;
+            teamPageIsOpen = false;
         }
         else
         {
@@ -203,10 +276,12 @@ public class PlayerSelection : MonoBehaviour
 
     public void BackToTeamPage()
     {
+        //chooseTeamPage.SetActive(false);
         // move out confirm selection
         confirmSelectionPage.GetComponent<Animator>().Play("TeamPageRight");
         // move in team page
         chooseTeamPage.GetComponent<Animator>().Play("PlayerPageBack");
+        teamPageIsOpen = true;
     }
 
     public void DeleteTeamMember(int i)

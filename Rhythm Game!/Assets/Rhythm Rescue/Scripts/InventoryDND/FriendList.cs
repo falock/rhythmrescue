@@ -74,7 +74,7 @@ public class FriendList : MonoBehaviour
             friendSlots.Clear();
             for (int i = 0; i < friendParent.childCount; i++)
             {
-                if(friendParent.GetChild(i) != null)
+                if (friendParent.GetChild(i) != null)
                 {
                     friendSlots.Add(friendParent.GetChild(i).GetComponent<FriendSlot>());
                 }

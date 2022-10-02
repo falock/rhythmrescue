@@ -107,10 +107,13 @@ public class MusicNote : MonoBehaviour
 				(1f - (beat - conductor.songPosition / conductor.secPerBeat) / conductor.BeatsShownOnScreen));
 		}
 		nextY = startY + (endY - startY) * (1f - ((beat + length) - conductor.songPosition / conductor.secPerBeat) / conductor.BeatsShownOnScreen);
+
+		/*
 		if(startX != endX)
         {
 			nextX = startX + (endX - startX) * (1f - ((beat + length) - conductor.songPosition / conductor.secPerBeat) / conductor.BeatsShownOnScreen);
 		}
+		*/
 		Debug.DrawLine(transform.position, new Vector3(transform.position.x, nextY, transform.position.z), Color.magenta);
 
 		// Remove itself when out of the screen (remove line).

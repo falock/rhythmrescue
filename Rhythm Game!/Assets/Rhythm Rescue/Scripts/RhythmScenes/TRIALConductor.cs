@@ -12,14 +12,18 @@ public class TRIALConductor : MonoBehaviour
 	[SerializeField] public GameObject holdNotePrefab;
 	// [SerializeField] public GameObject holdNotePrefab;
 
-	// The positionY of music notes.
-	[NonSerialized] public float lane1PosX = -3;
-	[NonSerialized] public float lane2PosX = -1;
-	[NonSerialized] public float lane3PosX = 1;
-	[NonSerialized] public float lane4PosX = 3;
+	private float lane1PosX = -3;
+	private float lane2PosX = -1;
+	private float lane3PosX = 1;
+	private float lane4PosX = 3;
+
+	private float lane1PosXEnd = -3;
+	private float lane2PosXEnd = -1;
+	private float lane3PosXEnd = 1;
+	private float lane4PosXEnd = 3;
 
 	[Tooltip("What are the X positions of where the notes should spawn? How many lanes are there?")]
-	[SerializeField] private float[] lanePosX;
+	[SerializeField] private float lanePosX;
 	[SerializeField] public bool firstBossLevel;
 
 	// The start positionY of notes.
@@ -232,25 +236,29 @@ public class TRIALConductor : MonoBehaviour
 			if (lane[g] == 1)
 			{
 				if (!firstBossLevel) startX = lane1PosX;
-				musicNote.Initialize(this, startLineY, finishLineY, removeLineY, startX, lane1PosX, track[indexOfNextNote]);
+				else startX = lanePosX;
+				musicNote.Initialize(this, startLineY, finishLineY, removeLineY, startX, lane1PosXEnd, track[indexOfNextNote]);
 				Debug.Log("lane 1");
 			}
 			else if (lane[g] == 2)
 			{
 				if (!firstBossLevel) startX = lane2PosX;
-				musicNote.Initialize(this, startLineY, finishLineY, removeLineY, startX, lane2PosX, track[indexOfNextNote]);
+				else startX = lanePosX;
+				musicNote.Initialize(this, startLineY, finishLineY, removeLineY, startX, lane2PosXEnd, track[indexOfNextNote]);
 				Debug.Log("lane 2");
 			}
 			else if (lane[g] == 3)
 			{
 				if (!firstBossLevel) startX = lane3PosX;
-				musicNote.Initialize(this, startLineY, finishLineY, removeLineY, startX, lane3PosX, track[indexOfNextNote]);
+				else startX = lanePosX;
+				musicNote.Initialize(this, startLineY, finishLineY, removeLineY, startX, lane3PosXEnd, track[indexOfNextNote]);
 				Debug.Log("lane 3");
 			}
 			else if (lane[g] == 4)
 			{
 				if (!firstBossLevel) startX = lane4PosX;
-				musicNote.Initialize(this, startLineY, finishLineY, removeLineY, startX, lane4PosX, track[indexOfNextNote]);
+				else startX = lanePosX;
+				musicNote.Initialize(this, startLineY, finishLineY, removeLineY, startX, lane4PosXEnd, track[indexOfNextNote]);
 				Debug.Log("lane 4");
 			}
 			else

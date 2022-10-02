@@ -105,7 +105,7 @@ public class Settings : MonoBehaviour
             if (windowedBool == 0) windowedBool = 1;
             else windowedBool = 0;
         }
-        UpdateSettingsText();
+        //UpdateSettingsText();
     }
 
     public void MusicVolumeChange(Slider slider)
@@ -122,7 +122,7 @@ public class Settings : MonoBehaviour
 
     private void UpdateSettingsText()
     {
-        InventoryManager.current.UpdateSettingsText();
+        //InventoryManager.current.UpdateSettingsText();
     }
 
 }

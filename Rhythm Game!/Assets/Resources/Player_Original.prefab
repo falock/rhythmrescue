@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa93fbe49d87e4008bd569f590a5f93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 10
+  runSpeed: 6
   noMovement: 1
   fullMovement: 0
   playerInRange: 0

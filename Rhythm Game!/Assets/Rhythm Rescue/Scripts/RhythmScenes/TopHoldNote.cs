@@ -16,6 +16,7 @@ public class TopHoldNote : MonoBehaviour
 	}
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		// if this note has entered the hit button, it is in range to be hit
 		if (other.tag == "Activator")
 		{
 			inRange = true;
@@ -25,6 +26,7 @@ public class TopHoldNote : MonoBehaviour
 
 	void OnTriggerExit2D(Collider2D other)
 	{
+		// if this note has passed the hit button and is still active, the note was missed
 		if (other.tag == "Activator" && gameObject.activeSelf)
 		{
 			inRange = false;
@@ -35,7 +37,7 @@ public class TopHoldNote : MonoBehaviour
 
 	void Update()
 	{
+		transform.position = new Vector2(musicNote.transform.position.x, transform.position.y);
 		musicNoteScript.positionY = this.transform.position.y;
-		// Debug.LogError($"Length = {length}, startY {startY}");
 	}
 }

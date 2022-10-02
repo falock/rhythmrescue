@@ -7,23 +7,25 @@ using System;
 
 public class RhythmManager : MonoBehaviour
 {
-    // Has the song started playing? 
-    public bool startPlaying;
-
     [Header("Assign")]
-    public TRIALConductor conductor;
+    //public TRIALConductor conductor;
     public GameObject conductorObject;
     // The song for this level, attached to the GameManager object, to determine when the results screen shows
-    public AudioSource theMusic;
+    //public AudioSource theMusic;
     public TryingToSpawnPrefab npcSpawner;
-    public event Action recruitNPCOption;
-    public bool songHasEnded = false;
-    public bool isPlaying;
-
-    public static RhythmManager instance;
+    //public event Action recruitNPCOption;
 
     [Header("NUMBER OF THIS LEVEL")]
     public int levelNumber;
+
+    [Header("Bools")]
+    public bool songHasEnded = false;
+    // Has the song started playing? 
+    public bool startPlaying;
+    // Is the song currently playing?
+    public bool isPlaying;
+
+    public static RhythmManager instance;
 
     [Header("Player Info")]
     public int currentScore;
@@ -32,23 +34,23 @@ public class RhythmManager : MonoBehaviour
 
     [Header("Note Scores")]
     // note scores
-    public int scorePerNote = 100;
-    public int scorePerGoodNote = 125;
-    public int scorePerPerfectNote = 150;
-    public int scorePerMissedNote = 50;
+    [NonSerialized] public int scorePerNote = 100;
+    [NonSerialized] public int scorePerGoodNote = 125;
+    [NonSerialized] public int scorePerPerfectNote = 150;
+    [NonSerialized] public int scorePerMissedNote = 50;
 
     // note amount
     public int noteAmount;
 
     [Header("Results Screen Info")]
     // score stats
-    public int totalNotes;
-    public int normalHits;
-    public int goodHits;
-    public int perfectHits;
-    public int missedHits;
-    public int badHits;
-    public float percentHit;
+    private int totalNotes;
+    private int normalHits;
+    private int goodHits;
+    private int perfectHits;
+    private int missedHits;
+    private int badHits;
+    private float percentHit;
 
     [Header("Continue Game GameObject")]
     public GameObject rhythmGameItems;
@@ -72,7 +74,7 @@ public class RhythmManager : MonoBehaviour
         startPlaying = true;
         InventoryManager.current.responseText.text = " ";
 
-        theMusic = GetComponent<AudioSource>();
+       // theMusic = GetComponent<AudioSource>();
         npcSpawner.SpawnNPCEnemies();
         Debug.Log("after spawn NPC Enemies");
         InventoryManager.current.SpawnTeamMembersRhythm();
